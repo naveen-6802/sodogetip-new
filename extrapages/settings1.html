@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=none">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Settings | SoDogeTip</title>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../navbar.css">
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<style type="text/css">
+#user:hover #mininav li {
+  padding: 10px;
+  text-transform: uppercase;
+}
+.lgtbtn {
+  background: white;
+  color: rgb(255,69,94);
+  border: 1px solid rgb(255,69,94);
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.lgtbtn:hover {
+  background: rgb(255,49,74);
+  color: white;
+  border-color: rgb(255,49,74);
+}
+.actvt {
+  background: white;
+  color: rgb(37,80,250);
+  border: 1px solid rgb(37,80,250);-
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 15px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.actvt:hover {
+  background: rgb(37,80,250);
+  color: white;
+}
+.sdt-tbl-con {
+  max-width: 100%;
+  margin: auto;
+  overflow: hidden;
+  text-align: center;
+}
+#sdt-main-table {
+     display: inline-block;
+  width: calc(90%/1);
+  margin: 0 -2px;
+  padding: 20px;
+  box-sizing: border-box;
+  transition: 0.4s;
+  outline: none;
+  border-radius: 4px;
+  }
+  @media screen and (max-width: 800px) {
+  #sdt-main-table{
+    width: 100%;
+    }
+    #rrmain {
+    width: 90%;
+    }
+  }
+.sdt-table {
+  border-collapse: collapse;
+  padding: 15px;
+  border: 1px solid rgba(37,80,250,0.3);
+  width: 100%;
+}
+.sdt-table tbody {
+  padding: 20px;
+}
+.sdt-table th , .sdt-table td{
+    text-align: left;
+    padding: 10px;
+    background: white;
+    border-bottom: 1px solid rgba(37,80,250,0.3);
+    color: rgb(30,41,59);
+}
+.sdt-table th {
+  background: rgb(242,243,244);
+  background: rgb(37,80,250);
+  color: rgb(98,105,118);
+  color: white;
+  text-transform: uppercase;
+  font-size: 10px;
+}
+.sdt-table tr{
+    background-color: #fff;
+}
+ #receive-rqst {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.5);
+    backdrop-filter:blur(6px);
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    white-space: nowrap;
+    z-index: 9999;
+    display: none;
+  }
+  #rrmain {
+    padding: 0px;
+    width: 45%;
+    height: auto;
+    background: white;
+      box-shadow: rgba(255, 255, 255, 0.3) 0px 4px 12px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      perspective: 1000px;
+      overflow-y: auto;
+      overflow-x: hidden;
+      border: 0px solid #fff;
+      border-radius: 6px;
+  }
+  .cptooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.cptooltip .cptooltiptext {
+  visibility: hidden;
+  width: 140px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  top: 150%;
+  left: 50%;
+  margin-left: -75px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  font-size: 14px;
+  word-break: break-word;
+  word-wrap: break-word;
+}
+
+.cptooltip:hover .cptooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+@media screen and (max-width: 800px) {
+  #sdt-main-table{
+    width: 100%;
+    }
+    #rrmain {
+    width: 90%;
+    }
+  }
+</style>
+<script src="https://rawgit.com/schmich/instascan-builds/master/instascan.min.js"></script>
+</head>
+<body>
+    <nav>
+        <div class="sdt-logo">
+            <img src="../wsdt.png" alt="Logo Image" onclick="window.location.href='../index.html';" style="cursor: pointer;">
+        </div>
+        <div class="sdt-hamburger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+        <ul class="sdt-nav-links">
+            <li><a href="../stats.html">Stats</a></li>
+            <li><a href="../coins.html">Coins</a></li>
+            <li><a href="../donations.html">Donations</a></li>
+            <li><a href="javascript:void(0);">Help <i class="fa fa-angle-down"></i></a>
+                <ul id="mininav">
+                    <li onclick="window.location.href='../help/faq.html'">FAQ</li>
+                    <li onclick="window.location.href='../help/quick-start.html'">Quick-Start</li>
+                    <li onclick="window.location.href='../help/tip-keyword.html'">Tip Keyword</li>
+                    <li onclick="window.location.href='../help/support.html'">Support</li>
+                </ul>
+            </li>
+        </ul>
+        <button id="user" class="sdt-tooltip1"><ion-icon name="person-circle-sharp"></ion-icon>
+            <ul id="mininav">
+                <li onclick="window.location.href='dashboard.html'">Dashboard</li>
+                <li onclick="window.location.href='withdraw.html'">Withdraw</li>
+                <li onclick="window.location.href='recurrent-tip.html'">Recurrent Tips</li>
+                <li onclick="window.location.href='javascript:void(0);'">Settings</li>
+                <li onclick="window.location.href='donate.html'">Donate</li>
+                <li onclick="window.location.href='stats.html'">Stats</li>
+                <li onclick="window.location.href='nft.html'">NFT's</li>
+                <li onclick="window.location.href='../index.html'"><span class="lgtbtn"><i class="fa fa-sign-out"></i> Logout</span></li>
+            </ul>
+        </button>
+    </nav>
+    <br/>
+
+<div id="receive-rqst">
+  <span style="position: absolute;right: 4%;top:1%;font-size: 25px;cursor: pointer;color: white;" onclick="this.parentElement.style.display = 'none';"><ion-icon name="close-circle"></ion-icon></span>
+  <div id="rrmain" style="word-wrap: break-word;word-break: break-word;">
+    <div id="your-add" style="background: rgb(37,80,250);padding:10px;color: #fff;width:auto;border:none;border-bottom: 1px solid rgba(37,80,250,0.3);word-wrap: break-word;white-space: pre-wrap;word-break: break-word;font-size: 14px;"><span id="maindadd" style="word-wrap: break-word;word-break: break-word;">DGWTPRakYPdLbM55xo3sELrF3F6B1SPjMo</span> <span onclick="myCPFunction()" onmouseout="outCPFunc()" class="cptooltip" style="color: #fff;cursor: pointer;"><ion-icon name="copy" style="font-size: 11px;color:#fff;"></ion-icon><span class="cptooltiptext" id="cptooltip">Copy to clipboard</span></span></div>
+    <br/><br/>
+    <center><img src="" height="200" width="200" id="myqr"></center><br/>
+  </div>
+</div>
+
+<h3 style="padding-left: 6%;color: rgb(30,41,59);">Settings</h3>
+<div class="sdt-tbl-con">
+    
+<div id="sdt-main-table">
+        <div style="background: white;box-sizing: border-box;width: 100%;box-sizing: border-box;font-size: 15px;padding: 10px;border: 1px solid rgba(37,80,250,0.3);border-bottom: none;color: rgb(37,80,250);"><b>Coins enabled in your account</b></div>
+<table class="sdt-table" style="box-sizing: border-box;">
+ 
+  <thead>
+
+  <tr>
+    <th>Coin</th>
+    <th>Status</th>
+    <th></th>
+  </tr>
+    
+  </thead>
+  
+<tbody>
+  <tr>
+    <td>Litecoin</td>
+    <td><button class="actvt">Activate</button></td>
+    <td><ion-icon name="qr-code-outline" style="cursor: pointer;"></ion-icon></td>
+  </tr>
+  <tr>
+    <td>Dogecoin</td>
+    <td style="color: green;">Activated</td>
+    <td><ion-icon name="qr-code-outline" style="cursor: pointer;" onclick="document.getElementById('receive-rqst').style.display = 'block';"></ion-icon></td>
+  </tr>
+</tbody>
+
+</table>
+</div>
+
+<div id="sdt-main-table">
+        <div style="background: white;box-sizing: border-box;width: 100%;box-sizing: border-box;font-size: 15px;padding: 10px;border: 1px solid rgba(37,80,250,0.3);border-bottom: none;color: rgb(37,80,250);"><b>Email settings</b></div>
+<table class="sdt-table" style="box-sizing: border-box;">
+  
+<tbody>
+  <tr>
+    <td><a href="../account/email.html" style="color: rgb(32,107,196);">Register your e-mail address</a></td>
+  </tr>
+</tbody>
+
+</table>
+</div>
+
+<div id="sdt-main-table">
+        <div style="background: white;box-sizing: border-box;width: 100%;box-sizing: border-box;font-size: 15px;padding: 10px;border: 1px solid rgba(37,80,250,0.3);border-bottom: none;color: rgb(37,80,250);"><b>SoDogeTip Account Id</b></div>
+<table class="sdt-table" style="box-sizing: border-box;">
+  
+<tbody>
+  <tr>
+    <td>Your account id is: 123456789</td>
+  </tr>
+</tbody>
+
+</table>
+</div>
+
+<div id="sdt-main-table">
+        <div style="background: white;box-sizing: border-box;width: 100%;box-sizing: border-box;font-size: 15px;padding: 10px;border: 1px solid rgba(37,80,250,0.3);border-bottom: none;color: rgb(37,80,250);"><b>Get Your Private Key</b></div>
+<table class="sdt-table" style="box-sizing: border-box;">
+  
+<tbody>
+  <tr>
+    <td>You must have verified e-mail to get your private key.</td>
+  </tr>
+</tbody>
+
+</table>
+</div>
+
+</div>
+
+
+<script type="text/javascript">
+const sdthamburger = document.querySelector(".sdt-hamburger");
+const navLinks = document.querySelector(".sdt-nav-links");
+const links = document.querySelectorAll(".sdt-nav-links li");
+
+sdthamburger.addEventListener('click', ()=>{
+   //Animate Links
+    navLinks.classList.toggle("open");
+    links.forEach(link => {
+        link.classList.toggle("fade");
+    });
+
+    //sdt-hamburger Animation
+    sdthamburger.classList.toggle("toggle");
+});
+    </script>
+    <script type="text/javascript">
+      function myCPFunction() {
+  var copyText = document.getElementById("maindadd");
+  navigator.clipboard.writeText(copyText.innerHTML);
+  
+  var tooltip = document.getElementById("cptooltip");
+  tooltip.innerHTML = "Copied";
+}
+
+function outCPFunc() {
+  var tooltip = document.getElementById("cptooltip");
+  tooltip.innerHTML = "Copy to clipboard";
+}
+var GenerateQRCode, htmlEncode;
+    htmlEncode = function(value) {
+    return $('<div/>').text(value).html();
+  };
+    $('#myqr').attr('src', 'https://chart.googleapis.com/chart?cht=qr&chl=' + htmlEncode('dogecoin:'+document.getElementById("maindadd").innerHTML) + '&chs=500x500&chld=L|0');
+    </script>
+
+</body>
+</html>
