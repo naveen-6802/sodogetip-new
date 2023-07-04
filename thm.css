@@ -1,0 +1,39 @@
+body.light-theme {
+  background: rgb(248,250,252);
+}
+.light-theme .section-container .columns.content .content-container h5 {
+  color: black; 
+}
+.light-theme .section-container .columns.content .content-container p {
+  color: black; 
+}
+.light-theme nav ul li:hover #mininav, #user:hover #mininav {
+  background: white;
+}
+.light-theme nav ul li:hover #mininav li {
+  color: rgb(90,101,119);
+}
+.light-theme nav ul li:hover #mininav li:hover {
+  color: rgb(30,41,59);
+}
+.light-theme #user:hover #mininav {
+  border-width: 2px;
+  left: -5%;
+  background: white;
+}
+.light-theme #user:hover #mininav li  {
+  color: rgb(90,101,119);
+}
+.light-theme #user:hover #mininav li:hover {
+  color: rgb(30,41,59);
+}
+#thm-btn {
+    background: transparent;
+    position: absolute;
+    font-size: 25px;
+    border:none;
+    color:white;
+    right: 12%;
+    top: 24%;
+    cursor: pointer;
+}

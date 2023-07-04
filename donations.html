@@ -1,0 +1,1756 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=none">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Donations | SoDogeTip</title>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="navbar.css">
+    <style type="text/css">
+.sdt-services{
+  background: transparent;
+}
+.sdt-services h1{
+  display: inline-block;
+  text-transform: capitalize;
+  font-size: 20px;
+  padding-bottom: 10px;
+  margin-top: 10px;
+  text-align: center;
+  margin: auto;
+}
+.sdt-svc-cen{
+  max-width: 100%;
+  margin: auto;
+  overflow: hidden;
+  padding: 0px;
+  text-align: center;
+}
+.sdt-svc{
+  display: inline-block;
+  width: 90%;
+  margin: 0 -2px;
+  padding: 0px;
+  box-sizing: border-box;
+  transition: 0.4s;
+  outline: none;
+  border: 1px solid rgb(37,80,250);
+  border-radius: 0px;
+  margin-top: 0px;
+  word-wrap: break-word;
+  background: white;
+  height: auto;
+  overflow: hidden;
+}
+.sdt-svc:hover{
+  outline: none;
+}
+.sdt-svc i{
+  color: #3498db;
+  font-size: 34px;
+  margin-bottom: 30px;
+}
+.sdt-svc h2{
+  font-size: 15px;
+  text-transform: capitalize;
+  font-weight: bold;
+  margin: 0;
+  padding: 5px;
+
+}
+.sdt-svc p{
+  color: gray;
+  font-size: 12px;
+  font-weight: 500;
+}
+.sdt-svc:nth-child(2) {
+  width: 30%;
+}
+@media screen and (max-width: 800px) {
+  .sdt-svc{
+    width: 100%;
+    height: auto;
+    margin-left: 0px;
+  }
+  .sdt-svc:nth-child(2) {
+    width: 100%;
+  }
+}
+
+#sdt-main-table {
+    width: 84%;
+    display: block;
+    margin: auto;
+    border: 1px solid rgb(37,80,250);
+    overflow: hidden;
+    border-radius: 6px;
+}
+.sdt-table {
+  border-collapse: collapse;
+  padding: 15px;
+  width: 100%;
+}
+.sdt-table tbody {
+  padding: 20px;
+}
+.sdt-table th , .sdt-table td{
+    text-align: left;
+    padding: 10px;
+    background: white;
+    border-bottom: 1px solid rgba(37,80,250,0.3);
+    color: rgb(30,41,59);
+}
+.sdt-table th {
+  background: rgb(242,243,244);
+  background-color: rgb(37,80,250);
+  color: rgb(98,105,118);
+  color: white;
+  text-transform: uppercase;
+  font-size: 10px;
+}
+.sdt-table tr{
+    background-color: #fff;
+}
+ 
+.sdtPagination li:hover{
+    cursor: pointer;
+}
+ .sdtPagination {
+    display: flex;
+    padding: 0px;
+  }
+  .sdtPagination li {
+    list-style: none;
+  }
+  .sdtPagination li span {
+    background: white;
+    padding: 10px;
+    border: 1px solid rgb(37,80,250);
+    font-size: 15px;
+    margin-left: 5px;
+    border-radius: 6px;
+  }
+  .sdtPagination li span:hover {
+    background: rgb(37,80,250);
+    color: white;
+  }
+  @media screen and (max-width: 800px) {
+  #sdt-main-table{
+    width: 85%;
+    }
+  }
+  #search_input_all {
+    outline: 0;
+    border:none;
+    height: 100%;
+    border-left: 0px solid rgba(37,80,250,0.3);
+    padding: 10px;
+    background: rgb(37,80,250);
+    color: white;
+  }
+  #search_input_all::placeholder {
+    color: rgba(255,255,255,0.8);
+  }
+  .cptooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.cptooltip .cptooltiptext {
+  visibility: hidden;
+  width: 140px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -75px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.cptooltip .cptooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.cptooltip:hover .cptooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+</style>
+
+</head>
+<body>
+    <nav>
+        <div class="sdt-logo">
+            <img src="wsdt.png" alt="Logo Image" onclick="window.location.href='index.html';" style="cursor: pointer;">
+        </div>
+        <div class="sdt-hamburger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+        <ul class="sdt-nav-links">
+            <li><a href="stats.html">Stats</a></li>
+            <li><a href="coins.html">Coins</a></li>
+            <li><a href="javascript:void(0);">Donations</a></li>
+            <li><a href="javascript:void(0);">Help <i class="fa fa-angle-down"></i></a>
+                <ul id="mininav">
+                    <li onclick="window.location.href='help/faq.html'">FAQ</li>
+                    <li onclick="window.location.href='help/quick-start.html'">Quick-Start</li>
+                    <li onclick="window.location.href='help/tip-keyword.html'">Tip Keyword</li>
+                    <li onclick="window.location.href='help/support.html'">Support</li>
+                </ul>
+            </li>
+        </ul>
+        <button id="user" class="sdt-tooltip1"><ion-icon name="person-circle-sharp"></ion-icon>
+            <ul id="mininav">
+                <li><p style="font-size: 12px;background: rgb(37,80,250);color: white;padding: 5px;padding-left: 10px;padding-right: 10px;border-radius: 6px;cursor: pointer;" onclick="window.location.href='login.html'">Login/Register</p></li>
+                <li><p style="font-size: 10px;">Takes less than a few seconds</p></li>
+            </ul>
+        </button>
+    </nav>
+    <br/>
+
+  <div class="sdt-services">
+    <h3 style="padding-left: 6%;color: rgb(30,41,59);">Donate & Support SoDogeTip</h3>
+      <div class="sdt-svc-cen">
+
+      <br/>
+      <p style="font-size:15px;color: rgb(30,41,59);padding-top: -10%;display: flex;justify-content: center;align-items: center;align-content: center;height: 100%;width: 84%;margin:auto;">
+Donate to SoDogeTip ! You can help SoDogeTip by donating crypto.
+All donations will be used to cover hosting expenses and other fees in order to run the bot.</p>
+  <br/>
+        
+        <div class="sdt-svc" style="padding: 0px;border-radius: 6px;width: 84%">
+          
+          <h2 style="color: black;background: rgb(37,80,250);color: white;padding: 10px;">Choose a donation method</h2>
+          <div style="padding: 10px;">
+          <p>You can send dogecoins to the tipbot address here : <br/>
+          <span id="dogecoinadd">DL767TGpgWkmXLF7z6rxrG1LK1dZjNJZ9L</span><br/><span onclick="myCPFunction()" onmouseout="outCPFunc()" class="cptooltip" style="color: black;cursor: pointer;">Click here to copy address &nbsp;<i class="fa fa-clone" style="font-size: 9px;color:black;"></i><span class="cptooltiptext" id="cptooltip">Copy to clipboard</span></span><br/>
+          <img height="100" width="100" src="donateqr.png" style="border-radius: 0px;" />
+        </p><br/>
+        <h2 style="color: black;">Use reddit +donate command</h2>
+          <p>You can also use the <a href="https://www.reddit.com/message/compose?to=sodogetip&subject=%2Bdonate&message=%2Bdonate%20AMOUNT%20doge" style="color: rgb(32,107,196);text-decoration: none;"><strong>+donate</strong></a> command to donate via reddit.</p>
+          <br/>
+          <h2 style="color: black;">Use website directly</h2>
+          <p>You can donate on website directly with this link (require user logged in) : <a href="account/donate.html" style="color: rgb(32,107,196);text-decoration: none;"><strong>Go to donate page</strong></a></p>
+        </div>
+        </div>
+      
+    </div>
+</div>
+
+<br/>
+
+<!-- Donation of Month Table  -->
+<div class="sdt-tbl-con">
+    
+<div id="sdt-main-table">
+   
+        <div style="background: rgb(37,80,250);width: 100%;font-size: 15px;padding: 10px;color: white;text-align: center;">Donation of month !</div>
+<table class="sdt-table" style="box-sizing: border-box;">
+ 
+  <thead>
+
+  <tr>
+    <th>USER</th>
+    <th>Total Donation This Month</th>
+  </tr>
+    
+  </thead>
+  
+  <tbody>
+  <tr>
+    <td><i  class="fa fa-twitter"></i>&nbsp; HODLdogeNOTdebt</td>
+    <td>273.51 Doge</td>
+  </tr>
+  <tr>
+    <td><i  class="fa fa-twitter"></i>&nbsp; CalisCihan</td>
+    <td>200.00 Doge</td>
+  </tr>
+  <tr>
+    <td><i  class="fa fa-twitter"></i>&nbsp; sir_cheems</td>
+    <td>14.26 Doge</td>
+  </tr>
+  <tr>
+    <td><i  class="fa fa-twitter"></i>&nbsp; just_an_dev</td>
+    <td>10.00 Doge</td>
+  </tr>
+  <tr>
+    <td><i  class="fa fa-twitter"></i>&nbsp; 69shibe</td>
+    <td>0.14 Doge</td>
+  </tr>
+  
+      </tbody>
+
+</table>
+
+
+</div>
+</div>
+<!-- Donation of Month table end -->
+
+<br/>
+
+<!-- Hall of Fame table start -->
+<div class="sdt-tbl-con">
+    
+        <div class="form-group" style="display: none;">  <!--    Show Numbers Of Rows    -->
+          <select class  ="form-control" name="state" id="maxRows">
+             <option value="6">Show ALL Rows</option>
+             <option value="5">5</option>
+             <option value="10" selected="true">10</option>
+             <option value="15">15</option>
+             <option value="20">20</option>
+             <option value="50">50</option>
+             <option value="70">70</option>
+             <option value="100">100</option>
+            </select>
+          
+          </div>
+
+<div id="sdt-main-table">
+   
+
+        <div style="display: flex;justify-content: space-between;background: rgb(37,80,250);width: 100%;font-size: 15px;padding: 0px;border: none;color: white;"><span style="padding: 10px;">Hall of fame !</span> <span class="tb_search" style="float: right;width: 50%;">
+<input type="text" id="search_input_all" onkeyup="FilterkeyWord_all_table()" placeholder="Search by username" class="form-control" style="width: 100%;">
+        </span></div>
+
+<table id="sdt-table-id" class="sdt-table">
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Total Amount Donated</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <i class="fa fa-twitter"></i>&nbsp;HODLdogeNOTdebt
+      </td>
+      <td>7,694.20 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-reddit"></i>&nbsp;
+        tarbel
+      </td>
+      <td>5,200.00 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-reddit"></i>&nbsp;
+        spacesticks
+      </td>
+      <td>5,100.00 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-reddit"></i>&nbsp;
+        just-an-dev
+      </td>
+      <td>4,294.00 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-reddit"></i>&nbsp;
+        computer__genius
+      </td>
+      <td>2,500.00 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-reddit"></i>&nbsp;
+        c6da9ef157ee76a9e913
+      </td>
+      <td>2,048.00 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-twitter"></i>&nbsp;CalisCihan
+      </td>
+      <td>1,339.43 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-reddit"></i>&nbsp;
+        tech2025_
+      </td>
+      <td>800.00 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-twitter"></i>&nbsp;Oonabot
+      </td>
+      <td>510.00 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-reddit"></i>&nbsp;
+        b0nu5sh1be
+      </td>
+      <td>363.00 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-twitter"></i>&nbsp;inevitable360
+      </td>
+      <td>304.42 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-twitter"></i>&nbsp;BackToTheDoge
+      </td>
+      <td>290.00 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-twitter"></i>&nbsp;SheckJuarez
+      </td>
+      <td>260.00 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-reddit"></i>&nbsp;
+        bbgun86
+      </td>
+      <td>250.00 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-reddit"></i>&nbsp;
+        ki0sk
+      </td>
+      <td>250.00 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-reddit"></i>&nbsp;
+        fazzer6132
+      </td>
+      <td>240.00 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-reddit"></i>&nbsp;
+        cryptopeasant
+      </td>
+      <td>237.50 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-twitter"></i>&nbsp;Matt_Hypez
+      </td>
+      <td>200.00 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-reddit"></i>&nbsp;
+        jumping001
+      </td>
+      <td>191.00 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-twitter"></i>&nbsp;JustinScerini
+      </td>
+      <td>169.00 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-reddit"></i>&nbsp;
+        inhumane_thoughts
+      </td>
+      <td>160.00 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-reddit"></i>&nbsp;
+        impys
+      </td>
+      <td>155.00 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-reddit"></i>&nbsp;
+        accountingdream
+      </td>
+      <td>134.00 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-twitter"></i>&nbsp;mishaboar
+      </td>
+      <td>127.64 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-reddit"></i>&nbsp;
+        dogesavior
+      </td>
+      <td>120.00 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-twitter"></i>&nbsp;J3org3Lop3z
+      </td>
+      <td>104.20 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-twitter"></i>&nbsp;untitledmonarch
+      </td>
+      <td>104.20 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-reddit"></i>&nbsp;
+        dogecoingiver
+      </td>
+      <td>100.00 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-reddit"></i>&nbsp;
+        studytime23
+      </td>
+      <td>100.00 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-reddit"></i>&nbsp;
+        shibe5
+      </td>
+      <td>100.00 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-twitter"></i>&nbsp;DogmoneyDog
+      </td>
+      <td>100.00 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-reddit"></i>&nbsp;
+        bondrewd_lod
+      </td>
+      <td>100.00 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-reddit"></i>&nbsp;
+        dogecoinslottery
+      </td>
+      <td>99.00 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-twitter"></i>&nbsp;13dogecoin
+      </td>
+      <td>98.09 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-twitter"></i>&nbsp;ArroyoXIII
+      </td>
+      <td>91.76 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-twitter"></i>&nbsp;gomez_brilliant
+      </td>
+      <td>80.15 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-reddit"></i>&nbsp;
+        nemessa_nemesin
+      </td>
+      <td>80.00 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-twitter"></i>&nbsp;doge_mom
+      </td>
+      <td>75.42 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-reddit"></i>&nbsp;
+        dev-tacular
+      </td>
+      <td>75.00 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-reddit"></i>&nbsp;
+        pm_me_georgiapeaches
+      </td>
+      <td>69.00 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-twitter"></i>&nbsp;just_an_dev
+      </td>
+      <td>57.80 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-reddit"></i>&nbsp;
+        focusfon0
+      </td>
+      <td>54.00 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-twitter"></i>&nbsp;gojonbriel
+      </td>
+      <td>50.00 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-reddit"></i>&nbsp;
+        dogzoutfront
+      </td>
+      <td>50.00 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-reddit"></i>&nbsp;
+        tangoindiam1ke
+      </td>
+      <td>50.00 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-reddit"></i>&nbsp;
+        garylittlemore
+      </td>
+      <td>50.00 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-twitter"></i>&nbsp;Max70092843
+      </td>
+      <td>49.97 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-twitter"></i>&nbsp;Fierce_Skit
+      </td>
+      <td>46.71 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-twitter"></i>&nbsp;spacebucks777
+      </td>
+      <td>45.00 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-reddit"></i>&nbsp;
+        indisskys131
+      </td>
+      <td>42.00 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-twitter"></i>&nbsp;Dogememegirl
+      </td>
+      <td>42.00 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-twitter"></i>&nbsp;Doge_PAC
+      </td>
+      <td>40.00 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-reddit"></i>&nbsp;
+        pansv808
+      </td>
+      <td>40.00 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-reddit"></i>&nbsp;
+        wildwylez
+      </td>
+      <td>40.00 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-twitter"></i>&nbsp;sir_cheems
+      </td>
+      <td>36.36 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-twitter"></i>&nbsp;ZARKCARD
+      </td>
+      <td>35.00 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-reddit"></i>&nbsp;
+        kovikovi144
+      </td>
+      <td>31.00 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-reddit"></i>&nbsp;
+        technicianit
+      </td>
+      <td>30.00 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-reddit"></i>&nbsp;
+        glass_and_trees
+      </td>
+      <td>30.00 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-reddit"></i>&nbsp;
+        purpleefilthh
+      </td>
+      <td>30.00 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-reddit"></i>&nbsp;
+        drizzleboyy
+      </td>
+      <td>30.00 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-reddit"></i>&nbsp;
+        datatagmc
+      </td>
+      <td>26.00 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-reddit"></i>&nbsp;
+        jam2dabeat323
+      </td>
+      <td>25.00 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-twitter"></i>&nbsp;MoneyIsntReal_
+      </td>
+      <td>25.00 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-twitter"></i>&nbsp;cyn_dogelover
+      </td>
+      <td>25.00 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-twitter"></i>&nbsp;MoarHodl
+      </td>
+      <td>23.77 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-reddit"></i>&nbsp;
+        crispingarcia
+      </td>
+      <td>23.00 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-twitter"></i>&nbsp;vidyaputra
+      </td>
+      <td>22.00 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-twitter"></i>&nbsp;RepeatAfterVee
+      </td>
+      <td>20.22 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-reddit"></i>&nbsp;
+        jmmaac
+      </td>
+      <td>20.00 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-reddit"></i>&nbsp;
+        herbalistix92
+      </td>
+      <td>20.00 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-reddit"></i>&nbsp;
+        thebarefootedbastard
+      </td>
+      <td>20.00 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-reddit"></i>&nbsp;
+        standardmale
+      </td>
+      <td>20.00 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-reddit"></i>&nbsp;
+        sinister963
+      </td>
+      <td>20.00 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-twitter"></i>&nbsp;DogeInvested
+      </td>
+      <td>20.00 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-reddit"></i>&nbsp;
+        thedogelegend27
+      </td>
+      <td>19.00 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-reddit"></i>&nbsp;
+        stellar_stream
+      </td>
+      <td>17.00 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-reddit"></i>&nbsp;
+        whatwhat0420
+      </td>
+      <td>16.00 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-twitter"></i>&nbsp;chriscusu
+      </td>
+      <td>15.20 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-reddit"></i>&nbsp;
+        ok_tour_7285
+      </td>
+      <td>15.00 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-reddit"></i>&nbsp;
+        partack
+      </td>
+      <td>15.00 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-twitter"></i>&nbsp;cryptohusler
+      </td>
+      <td>15.00 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-twitter"></i>&nbsp;tantran955
+      </td>
+      <td>12.60 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-twitter"></i>&nbsp;catandradec
+      </td>
+      <td>11.11 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-reddit"></i>&nbsp;
+        nickonashi69
+      </td>
+      <td>11.10 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-reddit"></i>&nbsp;
+        hedonisticgoddess
+      </td>
+      <td>11.00 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-reddit"></i>&nbsp;
+        toastypost
+      </td>
+      <td>10.00 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-reddit"></i>&nbsp;
+        raphizfr
+      </td>
+      <td>10.00 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-reddit"></i>&nbsp;
+        ordinaryman98
+      </td>
+      <td>10.00 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-reddit"></i>&nbsp;
+        myironcity
+      </td>
+      <td>10.00 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-reddit"></i>&nbsp;
+        thelinguist245
+      </td>
+      <td>10.00 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-reddit"></i>&nbsp;
+        gm487
+      </td>
+      <td>10.00 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-twitter"></i>&nbsp;TheUnderDoge3
+      </td>
+      <td>10.00 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-reddit"></i>&nbsp;
+        debiandog
+      </td>
+      <td>10.00 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-reddit"></i>&nbsp;
+        liquid_at
+      </td>
+      <td>10.00 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-twitter"></i>&nbsp;AlexRob12252696
+      </td>
+      <td>10.00 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-twitter"></i>&nbsp;UpdateRail
+      </td>
+      <td>10.00 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-reddit"></i>&nbsp;
+        goingmenthol
+      </td>
+      <td>10.00 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-twitter"></i>&nbsp;Jason Woehlke
+      </td>
+      <td>10.00 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-reddit"></i>&nbsp;
+        j3rain
+      </td>
+      <td>10.00 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-reddit"></i>&nbsp;
+        prof_trentonyo
+      </td>
+      <td>10.00 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-reddit"></i>&nbsp;
+        gguest987
+      </td>
+      <td>8.90 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-twitter"></i>&nbsp;thetradingalien
+      </td>
+      <td>8.41 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-twitter"></i>&nbsp;CaliShibe714
+      </td>
+      <td>8.41 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-twitter"></i>&nbsp;Doge Norway 🇳🇴
+      </td>
+      <td>7.90 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-twitter"></i>&nbsp;hellokevvo
+      </td>
+      <td>6.94 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-twitter"></i>&nbsp;88shibe
+      </td>
+      <td>6.94 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-twitter"></i>&nbsp;DogeMau420
+      </td>
+      <td>6.90 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-twitter"></i>&nbsp;Jax007C
+      </td>
+      <td>6.90 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-twitter"></i>&nbsp;FreeDogeMau420
+      </td>
+      <td>6.90 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-twitter"></i>&nbsp;Rach 💎 🐕 🌙
+      </td>
+      <td>6.90 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-twitter"></i>&nbsp;VijayGounder
+      </td>
+      <td>6.90 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-reddit"></i>&nbsp;
+        doge_satan
+      </td>
+      <td>6.66 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-twitter"></i>&nbsp;AshleyHiott1
+      </td>
+      <td>6.00 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-reddit"></i>&nbsp;
+        hegedis
+      </td>
+      <td>6.00 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-reddit"></i>&nbsp;
+        furryaltowo1
+      </td>
+      <td>5.00 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-twitter"></i>&nbsp;TheDogeOfNorway
+      </td>
+      <td>5.00 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-reddit"></i>&nbsp;
+        rain_bot
+      </td>
+      <td>5.00 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-reddit"></i>&nbsp;
+        airadvantage
+      </td>
+      <td>5.00 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-reddit"></i>&nbsp;
+        dogexleeze
+      </td>
+      <td>5.00 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-reddit"></i>&nbsp;
+        cata04
+      </td>
+      <td>5.00 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-reddit"></i>&nbsp;
+        kyledren
+      </td>
+      <td>5.00 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-reddit"></i>&nbsp;
+        linux_is_awesome
+      </td>
+      <td>5.00 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-twitter"></i>&nbsp;Dogemarine
+      </td>
+      <td>5.00 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-twitter"></i>&nbsp;filb4
+      </td>
+      <td>5.00 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-reddit"></i>&nbsp;
+        jsrobson10
+      </td>
+      <td>4.80 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-twitter"></i>&nbsp;SignatureDoge
+      </td>
+      <td>4.21 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-twitter"></i>&nbsp;PharaohProd_
+      </td>
+      <td>4.21 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-twitter"></i>&nbsp;seniorspagheti
+      </td>
+      <td>4.21 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-twitter"></i>&nbsp;reallyLarry_
+      </td>
+      <td>4.20 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-twitter"></i>&nbsp;rumba_alex
+      </td>
+      <td>4.20 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-twitter"></i>&nbsp;Andr3sperdomo
+      </td>
+      <td>4.20 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-twitter"></i>&nbsp;yescooler7985
+      </td>
+      <td>4.20 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-twitter"></i>&nbsp;culley_adam
+      </td>
+      <td>4.20 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-twitter"></i>&nbsp;ariyan_mil
+      </td>
+      <td>4.20 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-twitter"></i>&nbsp;_mintydoge
+      </td>
+      <td>4.20 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-twitter"></i>&nbsp;andre_csv
+      </td>
+      <td>4.20 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-reddit"></i>&nbsp;
+        finallyifoundvalidun
+      </td>
+      <td>4.00 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-reddit"></i>&nbsp;
+        taronyu019
+      </td>
+      <td>4.00 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-twitter"></i>&nbsp;dogesuppporteam
+      </td>
+      <td>3.39 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-reddit"></i>&nbsp;
+        nidzer0
+      </td>
+      <td>3.00 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-reddit"></i>&nbsp;
+        ihideinclosets
+      </td>
+      <td>3.00 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-reddit"></i>&nbsp;
+        jxyjvy
+      </td>
+      <td>3.00 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-twitter"></i>&nbsp;SurferDogecoin
+      </td>
+      <td>2.42 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-reddit"></i>&nbsp;
+        realistic-bill7358
+      </td>
+      <td>2.28 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-reddit"></i>&nbsp;
+        over-share-8596
+      </td>
+      <td>2.00 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-twitter"></i>&nbsp;DogeCoinMilitia
+      </td>
+      <td>2.00 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-reddit"></i>&nbsp;
+        pissmaster5
+      </td>
+      <td>2.00 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-twitter"></i>&nbsp;SmilingBoy123
+      </td>
+      <td>2.00 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-twitter"></i>&nbsp;ettiechang
+      </td>
+      <td>2.00 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-twitter"></i>&nbsp;SoldNever
+      </td>
+      <td>2.00 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-twitter"></i>&nbsp;myselfdrbharat
+      </td>
+      <td>2.00 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-twitter"></i>&nbsp;OmowunmiAbidem6
+      </td>
+      <td>1.50 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-twitter"></i>&nbsp;96sdrawkcab
+      </td>
+      <td>1.49 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-twitter"></i>&nbsp;foshodoge
+      </td>
+      <td>1.42 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-twitter"></i>&nbsp;HueseyinBC
+      </td>
+      <td>1.42 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-twitter"></i>&nbsp;Investo91736914
+      </td>
+      <td>1.20 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-twitter"></i>&nbsp;sinequanun
+      </td>
+      <td>1.11 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-twitter"></i>&nbsp;dogeloverkb
+      </td>
+      <td>1.00 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-twitter"></i>&nbsp;Dogeverse12
+      </td>
+      <td>1.00 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-reddit"></i>&nbsp;
+        scott30134
+      </td>
+      <td>1.00 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-reddit"></i>&nbsp;
+        specticworld
+      </td>
+      <td>1.00 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-reddit"></i>&nbsp;
+        mhubbz1409
+      </td>
+      <td>1.00 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-reddit"></i>&nbsp;
+        ad2z
+      </td>
+      <td>1.00 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-reddit"></i>&nbsp;
+        necessary-pension224
+      </td>
+      <td>1.00 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-twitter"></i>&nbsp;mhadtk
+      </td>
+      <td>1.00 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-twitter"></i>&nbsp;RicosIntoCrytpo
+      </td>
+      <td>1.00 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-reddit"></i>&nbsp;
+        millian12
+      </td>
+      <td>1.00 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-reddit"></i>&nbsp;
+        f3archar
+      </td>
+      <td>1.00 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-twitter"></i>&nbsp;bobtrack5
+      </td>
+      <td>1.00 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-reddit"></i>&nbsp;
+        grant570
+      </td>
+      <td>1.00 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-twitter"></i>&nbsp;DogecoinCuban
+      </td>
+      <td>1.00 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-reddit"></i>&nbsp;
+        masterbatesalot
+      </td>
+      <td>1.00 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-twitter"></i>&nbsp;JSims15597741
+      </td>
+      <td>1.00 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-twitter"></i>&nbsp;Doge France 🇫🇷
+      </td>
+      <td>1.00 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-twitter"></i>&nbsp;InspiredBohemia
+      </td>
+      <td>0.79 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-twitter"></i>&nbsp;MAJORTOMMM1
+      </td>
+      <td>0.75 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-twitter"></i>&nbsp;Doge6999
+      </td>
+      <td>0.69 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-twitter"></i>&nbsp;VladimirPeng
+      </td>
+      <td>0.66 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-twitter"></i>&nbsp;DeepakOffline
+      </td>
+      <td>0.42 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-twitter"></i>&nbsp;69shibe
+      </td>
+      <td>0.14 Doge</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="fa fa-reddit"></i>&nbsp;
+        netherlandbiker
+      </td>
+      <td>0.00 Doge</td>
+    </tr>
+  </tbody>
+</table>
+<div style="background: white;box-sizing: border-box;width: 100%;box-sizing: border-box;font-size: 15px;padding: 10px;border: none;border-bottom: 1px solid rgba(37,80,250,0.3);">If people don’t want to see their name here, please <a href="https://reddit.com/u/just-an-dev" style="text-decoration: none;color: rgb(32,107,196);" target="_blank">send me a PM on Reddit..</a></div>
+
+<div class='sdtPagination-sdt-tbl-con' >
+        <div>
+          <ul class="sdtPagination">
+            
+            <li data-page="prev" >
+                     <span> <i class="fa fa-angle-left"></i> <span class="sr-only"></span></span>
+                    </li>
+           <!-- Here the JS Function Will Add the Rows -->
+        <li data-page="next" id="prev">
+                       <span> <i class="fa fa-angle-right"></i> <span class="sr-only"></span></span>
+                    </li>
+          </ul>
+        </div>
+      </div>
+
+</div>
+</div>
+<!-- End of Hall of Fame table -->
+<br/>
+        <script type="text/javascript">
+        const sdthamburger = document.querySelector(".sdt-hamburger");
+const navLinks = document.querySelector(".sdt-nav-links");
+const links = document.querySelectorAll(".sdt-nav-links li");
+
+sdthamburger.addEventListener('click', ()=>{
+   //Animate Links
+    navLinks.classList.toggle("open");
+    links.forEach(link => {
+        link.classList.toggle("fade");
+    });
+
+    //sdt-hamburger Animation
+    sdthamburger.classList.toggle("toggle");
+});
+    </script>
+    <script type="text/javascript">
+            getsdtPagination('#sdt-table-id');
+     
+
+function getsdtPagination(table) {
+  var lastPage = 1;
+
+  $('#maxRows')
+    .on('change', function(evt) {
+      //$('.sdtPaginationprev').html('');            // reset sdtPagination
+
+     lastPage = 1;
+      $('.sdtPagination')
+        .find('li')
+        .slice(1, -1)
+        .remove();
+      var trnum = 0; // reset tr counter
+      var maxRows = parseInt($(this).val()); // get Max Rows from select option
+
+      if (maxRows == 5000) {
+        $('.sdtPagination').hide();
+      } else {
+        $('.sdtPagination').show();
+      }
+
+      var totalRows = $(table + ' tbody tr').length; // numbers of rows
+      $(table + ' tr:gt(0)').each(function() {
+        // each TR in  table and not the header
+        trnum++; // Start Counter
+        if (trnum > maxRows) {
+          // if tr number gt maxRows
+
+          $(this).hide(); // fade it out
+        }
+        if (trnum <= maxRows) {
+          $(this).show();
+        } // else fade in Important in case if it ..
+      }); //  was fade out to fade it in
+      if (totalRows > maxRows) {
+        // if tr total rows gt max rows option
+        var pagenum = Math.ceil(totalRows / maxRows); // ceil total(rows/maxrows) to get ..
+        //  numbers of pages
+        for (var i = 1; i <= pagenum; ) {
+          // for each page append sdtPagination li
+          $('.sdtPagination #prev')
+            .before(
+              '<li data-page="' +
+                i +
+                '">\
+                  <span>' +
+                i++ +
+                '<span class="sr-only"></span></span>\
+                </li>'
+            )
+            .show();
+        } // end for i
+      } // end if row count > max rows
+      $('.sdtPagination [data-page="1"]').addClass('active'); // add active class to the first li
+      $('.sdtPagination li').on('click', function(evt) {
+        // on click each page
+        evt.stopImmediatePropagation();
+        evt.preventDefault();
+        var pageNum = $(this).attr('data-page'); // get it's number
+
+        var maxRows = parseInt($('#maxRows').val()); // get Max Rows from select option
+
+        if (pageNum == 'prev') {
+          if (lastPage == 1) {
+            return;
+          }
+          pageNum = --lastPage;
+        }
+        if (pageNum == 'next') {
+          if (lastPage == $('.sdtPagination li').length - 3) {
+            return;
+          }
+          pageNum = ++lastPage;
+        }
+
+        lastPage = pageNum;
+        var trIndex = 0; // reset tr counter
+        $('.sdtPagination li').removeClass('active'); // remove active class from all li
+        $('.sdtPagination [data-page="' + lastPage + '"]').addClass('active'); // add active class to the clicked
+        // $(this).addClass('active');          // add active class to the clicked
+      limitPagging();
+        $(table + ' tr:gt(0)').each(function() {
+          // each tr in table not the header
+          trIndex++; // tr index counter
+          // if tr index gt maxRows*pageNum or lt maxRows*pageNum-maxRows fade if out
+          if (
+            trIndex > maxRows * pageNum ||
+            trIndex <= maxRows * pageNum - maxRows
+          ) {
+            $(this).hide();
+          } else {
+            $(this).show();
+          } //else fade in
+        }); // end of for each tr in table
+      }); // end of on click sdtPagination list
+    limitPagging();
+    })
+    .val(20)
+    .change();
+
+  // end of on select change
+
+  // END OF sdtPagination
+}
+
+function limitPagging(){
+  // alert($('.sdtPagination li').length)
+
+  if($('.sdtPagination li').length > 7 ){
+      if( $('.sdtPagination li.active').attr('data-page') <= 3 ){
+      $('.sdtPagination li:gt(5)').hide();
+      $('.sdtPagination li:lt(5)').show();
+      $('.sdtPagination [data-page="next"]').show();
+    }if ($('.sdtPagination li.active').attr('data-page') > 3){
+      $('.sdtPagination li:gt(0)').hide();
+      $('.sdtPagination [data-page="next"]').show();
+      for( let i = ( parseInt($('.sdtPagination li.active').attr('data-page'))  -2 )  ; i <= ( parseInt($('.sdtPagination li.active').attr('data-page'))  + 2 ) ; i++ ){
+        $('.sdtPagination [data-page="'+i+'"]').show();
+
+      }
+
+    }
+  }
+}
+
+
+function FilterkeyWord_all_table() {
+  
+// Count td if you want to search on all table instead of specific column
+
+  var count = $('.sdt-table').children('tbody').children('tr:first-child').children('td').length; 
+
+        // Declare variables
+  var input, filter, table, tr, td, i;
+  input = document.getElementById("search_input_all");
+  var input_value =     document.getElementById("search_input_all").value;
+        filter = input.value.toLowerCase();
+  if(input_value !=''){
+        table = document.getElementById("sdt-table-id");
+        tr = table.getElementsByTagName("tr");
+
+        // Loop through all table rows, and hide those who don't match the search query
+        for (i = 1; i < tr.length; i++) {
+          
+          var flag = 0;
+           
+          for(j = 0; j < count; j++){
+            td = tr[i].getElementsByTagName("td")[j];
+            if (td) {
+             
+                var td_text = td.innerHTML;  
+                if (td.innerHTML.toLowerCase().indexOf(filter) > -1) {
+                //var td_text = td.innerHTML;  
+                //td.innerHTML = 'shaban';
+                  flag = 1;
+                } else {
+                  //DO NOTHING
+                }
+              }
+            }
+          if(flag==1){
+                     tr[i].style.display = "";
+          }else {
+             tr[i].style.display = "none";
+          }
+        }
+    }else {
+      //RESET TABLE
+      $('#maxRows').trigger('change');
+    }
+}
+</script>
+<script>
+function myCPFunction() {
+  var copyText = document.getElementById("dogecoinadd");
+  navigator.clipboard.writeText(copyText.innerHTML);
+  
+  var tooltip = document.getElementById("cptooltip");
+  tooltip.innerHTML = "Copied: " + copyText.innerHTML;
+}
+
+function outCPFunc() {
+  var tooltip = document.getElementById("cptooltip");
+  tooltip.innerHTML = "Copy to clipboard";
+}
+</script>
+</body>
+</html>

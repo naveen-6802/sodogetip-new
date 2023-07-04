@@ -1,0 +1,195 @@
+*{
+    box-sizing: border-box;
+    font-family: arial;
+}
+body{
+    overflow-x: hidden;
+    margin: 0;
+    background: rgb(248,250,252);
+}
+nav{
+    height: ;
+    width: 100%;
+    background-color: rgb(30,41,59);
+    display: flex;
+    position: relative;
+    z-index: 10;
+    box-shadow: rgba(10, 21, 39, 0.8) 0px 2px 2px;
+}
+
+/*Styling sdt-logo*/
+.sdt-logo{
+    padding:1vh 1vw;
+    text-align: center;
+}
+.sdt-logo img {
+    height: 37px;
+    width: 107px;
+    margin-top: 0px;
+}
+
+/*Styling Links*/
+.sdt-nav-links{
+    display: flex;
+    list-style: none; 
+    width: 30%;
+    justify-content: space-evenly;
+    align-items: center;
+    text-transform: uppercase;
+}
+.sdt-nav-links li {
+    position: relative;
+}
+.sdt-nav-links li a{
+    text-decoration: none;
+    color: rgb(188,192,182);
+    font-size: 10px;
+    font-weight: bold;
+}
+.sdt-nav-links li a:hover{
+    color: #fff;
+}
+nav ul li #mininav, #mininav {
+  display: none;
+}
+nav ul li:hover #mininav, #user:hover #mininav {
+  display: block;
+  margin-top: 0px;
+  width: 120px;
+  left: -100%;
+  position: absolute;
+  padding: 10px;
+  box-shadow: rgba(30, 41, 59, 0.3) 0px 4px 12px;
+  background: white;
+  border:none;
+  border-top:10px solid rgb(30,41,59);
+  border-radius: 0px;
+}
+nav ul li:hover #mininav li{
+  display: block;
+  background-color: #fff;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  font-size: 10px;
+  color: rgb(90,101,119);
+  font-weight: bold;
+}
+#user:hover #mininav {
+  border-width: 2px;
+  left: -5%;
+}
+#user:hover #mininav li  {
+  display: block;
+  background-color: #fff;
+  padding: 0px;
+  text-align: center;
+  cursor: pointer;
+  font-size: 10px;
+  color: rgb(90,101,119);
+  font-weight: bold;
+}
+#user:hover #mininav li:hover {
+  background-color: white;
+  color: rgb(30,41,59);
+}
+nav ul li:hover #mininav li:hover {
+  background-color: white;
+  color: rgb(30,41,59);
+}
+/*Styling sdt-hamburger Icon*/
+.sdt-hamburger div{
+    width: 17px;
+    height:2px;
+    background: #fff;
+    margin: 4px;
+    transition: all 0.3s ease;
+}
+.sdt-hamburger{
+    display: none;
+}
+#user {
+    background-color: transparent;
+    position: absolute;
+    font-size: 30px;
+    border:none;
+    color:white;
+    right: 0%;
+    top: 18%;
+    width: 120px;
+}
+/*Stying for small screens*/
+@media screen and (max-width: 800px){
+    .sdt-logo {
+        margin-left: 12%;
+    }
+    nav{
+        z-index: 3;
+    }
+    .sdt-hamburger{
+        display:block;
+        position: absolute;
+        cursor: pointer;
+        left: 5%;
+        top: 50%;
+        transform: translate(-5%, -50%);
+        z-index: 2;
+        transition: all 0.7s ease;
+    }
+    .sdt-nav-links{
+        position: fixed;
+        background: rgb(30,41,59);
+        height: 40%;
+        width: 45%;
+        flex-direction: column;
+        transition: all 200ms ease-out;
+        pointer-events: none;
+        margin: 0;
+        padding: 0;
+        margin-left: -100%;
+        margin-top: 0;
+        box-shadow: rgba(10, 21, 39, 0.8) 0px 4px 0px;
+        box-shadow: 0 200px 0 0 rgb(30,41,59), 0 400px 0 0 rgb(30,41,59), 0 600px 0 0 rgb(30,41,59);
+    }
+    .sdt-nav-links li {
+        margin-top:;
+    }
+    .sdt-nav-links li a {
+        font-size: 14px;
+    }
+    .sdt-nav-links.open{
+        margin-left: 0%;
+        pointer-events: all;
+    }
+    nav ul li:hover #mininav {
+      left:-80%;
+    }
+    li.fade{
+        opacity: 1;
+    }
+    #user {
+        top: 21%;
+        right: -5%;
+    }
+    #user:hover #mininav {
+      left:-20%;
+      width: 120px;
+      top: 80%;
+    }
+    #user:hover #mininav li {
+
+    }
+    nav ul li:hover #mininav li, #user:hover #mininav li {
+      font-size: 14px;
+    }
+}
+/*Animating sdt-hamburger Icon on Click*/
+.toggle .line1{
+    width: 0px;
+}
+.toggle .line2 {
+  
+}
+.toggle .line3{
+    width: 0px;
+}

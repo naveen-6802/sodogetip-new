@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=none">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SoDogeTip</title>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="navbar.css">
+    <style type="text/css">
+#home-main-content {
+    width: 100%;
+    background-color: rgb(37,80,250);
+    padding: 20px;
+}
+.sdt-sec-con
+{
+--bs-gutter-x: 1.5rem;
+--bs-gutter-y: 0;
+display: flex;
+flex-wrap: wrap;
+font-family: 'Nunito', sans-serif;
+}
+.sdt-sec-con .sdt-cols
+{
+flex:0 0 auto;
+width:50%;
+height: auto;
+}
+.sdt-sec-con .sdt-cols.image
+{
+display: flex;
+justify-content: center;
+align-items: center;
+position: relative;
+}
+#sdtm {
+height: 450px;
+width: 450px;
+}
+.sdt-sec-con .sdt-cols.sdtcontent .sdt-con-cont
+{
+padding:40px 50px;
+background: rgb(37,80,250);
+padding-top: 100px;
+padding-bottom: 100px;
+color: white;
+}
+.sdt-sec-con .sdt-cols.sdtcontent .sdt-con-cont .h3
+{
+font-size:30px;
+margin-bottom:20px;
+text-align: center;
+}
+.sdt-sec-con .sdt-cols.sdtcontent .sdt-con-cont p
+{
+font-weight:400;
+font-size:20px;
+margin-bottom:20px;
+margin-bottom:15px;
+text-align: center;
+}
+@media screen and (max-width:800px)
+{
+.sdt-sec-con
+{
+flex-flow:row wrap;
+}
+.sdt-sec-con .sdt-cols.image{
+display:flex;
+justify-content: center;
+align-items: center;
+order:1;
+width:100%;
+}
+#sdtm {
+height: 400px;
+width: 400px;
+}
+.sdt-sec-con .sdt-cols.sdtcontent
+{
+display:block;
+order:2;
+width:100%;
+}
+.sdt-sec-con .sdt-cols.sdtcontent .sdt-con-cont
+{
+padding:20px 35px;
+}
+.sdt-sec-con .sdt-cols.sdtcontent .sdt-con-cont .h3
+{
+margin-bottom:5px;
+font-size: 25px;
+}
+.sdt-sec-con .sdt-cols.sdtcontent .sdt-con-cont p {
+font-size: 15px;
+}
+}
+#getstarted {
+    border:none;
+    background: white;
+    padding: 10px;
+    color: rgb(37,80,250);
+    border-radius: 7px;
+    font-weight: normal;
+    padding-right: 15px;
+    padding-left: 15px;
+    cursor: pointer;
+    font-size: 13px;
+}
+.section-container
+{
+display: flex;
+flex-wrap: wrap;
+background: transparent;
+}
+.section-container .columns
+{
+flex:0 0 auto;
+width:50%;
+height: auto;
+}
+.section-container .columns.image
+{
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.section-container .columns.content .content-container
+{
+padding:40px 50px;
+background: transparent;
+}
+.section-container .columns.content .content-container h5
+{
+font-weight:700;
+font-size:25px;
+margin-bottom:20px;
+text-transform: uppercase;
+text-align: center;
+}
+.section-container .columns.content .content-container p
+{
+font-weight:400;
+font-size:17px;
+margin-bottom:20px;
+margin-bottom:15px;
+text-align: center;
+}
+@media screen and (max-width:800px)
+{
+.section-container
+{
+flex-flow:row wrap;
+}
+.section-container .columns.image{
+display:flex;
+justify-content: center;
+align-items: center;
+order:1;
+width:100%;
+height:150px;
+}
+.section-container .columns.content
+{
+display:block;
+order:2;
+width:100%;
+}
+.section-container .columns.content .content-container
+{
+padding:20px 35px;
+}
+.section-container .columns.content .content-container h5
+{
+margin-bottom:5px;
+}
+}
+</style>
+
+</head>
+<body>
+    <nav>
+        <div class="sdt-logo">
+            <img src="wsdt.png" alt="Logo Image">
+        </div>
+        <div class="sdt-hamburger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+        <ul class="sdt-nav-links">
+            <li><a href="stats.html">Stats</a></li>
+            <li><a href="coins.html">Coins</a></li>
+            <li><a href="donations.html">Donations</a></li>
+            <li><a href="javascript:void(0);">Help <i class="fa fa-angle-down"></i></a>
+                <ul id="mininav">
+                    <li onclick="window.location.href='help/faq.html'">FAQ</li>
+                    <li onclick="window.location.href='help/quick-start.html'">Quick-Start</li>
+                    <li onclick="window.location.href='help/tip-keyword.html'">Tip Keyword</li>
+                    <li onclick="window.location.href='help/support.html'">Support</li>
+                </ul>
+            </li>
+        </ul>
+        <button id="user" class="sdt-tooltip1"><ion-icon name="person-circle-sharp"></ion-icon>
+            <ul id="mininav">
+                <li><p style="font-size: 12px;background: rgb(37,80,250);color: white;padding: 5px;padding-left: 10px;padding-right: 10px;border-radius: 6px;cursor: pointer;" onclick="window.location.href='login.html'">Login/Register</p></li>
+                <li><p style="font-size: 10px;">Takes less than a few seconds</p></li>
+            </ul>
+        </button>
+    </nav>
+
+    <div id="home-main-content">
+        <div class="sdt-sec-con" style="color: #111;">
+         <div class="sdt-cols sdtcontent">
+            <div class="sdt-con-cont">
+               <p class="h3" style="color: #fff;">
+                    SoDogeTip is an <b>on-chain tipping bot</b>, the most transparent cryptocurrency tipping bot.
+                </p>
+               <p>
+                  You can use sodogetip bot on twitter, reddit and discord. It is totally secure and easy.
+               </p>
+               <br/>
+               <center><button id="getstarted" onclick="window.location.href='login.html'">GET STARTED NOW</button></center>
+            </div>
+         </div>
+         <div class="sdt-cols image" style="background:rgb(37,80,250);">
+            <img src="sdtm.png" id="sdtm" />
+         </div>
+        </div>
+    </div>
+    <br/><br/>
+       <div class="section-container">
+         <div class="columns image">
+              <img src="2FA.png" height="150" width="150" />
+         </div>
+         <div class="columns content">
+            <div class="content-container">
+              <center>
+               <h5 style="color: #000;">2FA(Two-Factor-Authentication) Secured</h5>
+               <p>
+                  Best in class security, only you can withdraw your coins and see your private key with 2FA by using e-mail OTP verification.
+               </p>
+           </center>
+            </div>
+         </div>
+      </div>
+      <div class="section-container">
+         <div class="columns content">
+            <div class="content-container">
+               <h5 style="color: #000;">Instant Account Creation</h5>
+               <p>
+                  You don't need to remember lengthy and strong passwords to login or register, you can direct login with twitter/reddit/discord.
+               </p>
+            </div>
+         </div>
+         <div class="columns image">
+            <img src="INSTANT.png" height="150" width="150" />
+         </div>
+      </div>
+      <div class="section-container">
+         <div class="columns image">
+            <img src="FAST.png" height="150" width="150">
+         </div>
+         <div class="columns content">
+            <div class="content-container">
+               <h5 style="color: #000;">Fast Transactions</h5>
+               <p>
+                  SoDogeTip can easily handle multiple transcations at one time, it supports lightning fast multi-tipping.
+               </p>
+            </div>
+         </div>
+      </div>
+      <div class="section-container">
+         <div class="columns content">
+            <div class="content-container">
+               <h5 style="color: #000;">Across 3 Platforms</h5>
+               <p>
+                  SoDogeTip provides you easy and reliable tipping on more than one social media platforms(Twitter/Reddit/Discord).
+               </p>
+            </div>
+         </div>
+         <div class="columns image">
+            <img src="PLATFORMS.png" height="150" width="150" />
+         </div>
+      </div>
+      <div class="section-container">
+         <div class="columns image">
+            <img src="FEES.png" height="150" width="150">
+         </div>
+         <div class="columns content">
+            <div class="content-container">
+               <h5 style="color: #000;">Lowest fee & Completely free</h5>
+               <p>
+                  SoDogeTip only charges you network fee(lowest possible) for sending transactions or tipping, it doesn't charge you any extra fee and there is no hidden charges.
+               </p>
+            </div>
+         </div>
+      </div>
+      <div class="section-container">
+         <div class="columns content">
+            <div class="content-container">
+               <h5 style="color: #000;">Quality Support</h5>
+               <p>
+                  SoDogeTip dev is always here to help you, message me on social media with your query/problem, and I will help you in lowest-response-time.
+               </p>
+            </div>
+         </div>
+         <div class="columns image">
+            <img src="SUPPORT.png" height="150" width="150" />
+         </div>
+      </div>
+    <br/>
+
+        <script type="text/javascript">
+        const sdthamburger = document.querySelector(".sdt-hamburger");
+const navLinks = document.querySelector(".sdt-nav-links");
+const links = document.querySelectorAll(".sdt-nav-links li");
+
+sdthamburger.addEventListener('click', ()=>{
+   //Animate Links
+    navLinks.classList.toggle("open");
+    links.forEach(link => {
+        link.classList.toggle("fade");
+    });
+
+    //sdt-hamburger Animation
+    sdthamburger.classList.toggle("toggle");
+});
+    </script>
+</body>
+</html>

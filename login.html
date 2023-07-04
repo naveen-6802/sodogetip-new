@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=none">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login/Sign Up | SoDogeTip</title>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="navbar.css">
+    <style type="text/css">
+.sdt-services{
+  background: transparent;
+}
+.sdt-services h1{
+  display: inline-block;
+  text-transform: capitalize;
+  font-size: 20px;
+  padding-bottom: 10px;
+  margin-top: 10px;
+  text-align: center;
+  margin: auto;
+}
+.sdt-svc-cen{
+  margin: auto;
+  overflow: hidden;
+  padding: 0px;
+  text-align: center;
+  width: 30%;
+  border: 1px solid rgb(37,80,250);
+  overflow: hidden;
+  border-radius: 6px;
+}
+.sdt-svc{
+  padding: 0px;
+  box-sizing: border-box;
+  transition: 0.4s;
+  outline: none;
+  border-radius: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  word-wrap: break-word;
+  background: white;
+  border:1px solid rgba(37,80,250,0.3);
+  width: 80%;
+  margin: auto;
+  display: block;
+  margin-top: 10px;
+}
+.sdt-svc:hover{
+  outline: none;
+}
+.sdt-svc i{
+  font-size: 17px;
+}
+.sdt-svc h2{
+  font-weight: bold;
+  margin: 0;
+  font-size: 15px;
+  padding: 10px;
+}
+#prttn {
+  display: flex;
+  width: 90%;
+  justify-content: space-around;
+  margin:auto;
+}
+#ntst {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+.fa-reddit {
+  color: rgb(255,69,0);
+}
+.fa-twitter {
+  color: rgb(29,161,242);
+}
+.fa-discord {
+  color: rgb(88,101,242);
+}
+#rdlgn {
+  border-color: rgb(255,69,0);
+  outline: none;
+}
+#rdlgn:hover{
+  background: rgb(255,69,0);;
+  color: white;
+  outline: none;
+}
+#rdlgn:hover .fa-reddit {
+  color: white;
+}
+#twlgn {
+  border-color: rgb(29,161,242);
+  outline: 0;
+}
+#twlgn:hover {
+  background: rgb(29,161,242);
+  color: white;
+  outline: 0;
+}
+#twlgn:hover .fa-twitter {
+  color: white;
+}
+#dsclgn {
+  border-color: rgb(88,101,242);
+  outline: none;
+}
+#dsclgn:hover {
+  background: rgb(88,101,242);
+  color: white;
+  outline: 0;
+}
+#dsclgn:hover .fa-discord {
+  color: white;
+}
+@media screen and (max-width: 800px) {
+  .sdt-svc-cen {
+    width: 90%;
+    background: white;
+  }
+  .sdt-svc{
+    width: 90%;
+    margin-left: 0px;
+    margin: auto;
+    display: block;
+    margin-top: 20px;
+  }
+  .sdt-svc:nth-child(1) {
+    margin-top: 0px;
+  }
+  #prttn {
+    display: block;
+    width: 100%;
+    justify-content: none;
+    margin:auto;
+  }
+  #ntst {
+    width: 90%;
+    margin-top: 10%;
+  }
+}
+</style>
+
+</head>
+<body>
+    <nav>
+        <div class="sdt-logo">
+            <img src="wsdt.png" alt="Logo Image" onclick="window.location.href='index.html';" style="cursor: pointer;">
+        </div>
+        <div class="sdt-hamburger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+        <ul class="sdt-nav-links">
+            <li><a href="stats.html">Stats</a></li>
+            <li><a href="coins.html">Coins</a></li>
+            <li><a href="donations.html">Donations</a></li>
+            <li><a href="javascript:void(0);">Help <i class="fa fa-angle-down"></i></a>
+                <ul id="mininav">
+                    <li onclick="window.location.href='help/faq.html'">FAQ</li>
+                    <li onclick="window.location.href='help/quick-start.html'">Quick-Start</li>
+                    <li onclick="window.location.href='help/tip-keyword.html'">Tip Keyword</li>
+                    <li onclick="window.location.href='help/support.html'">Support</li>
+                </ul>
+            </li>
+        </ul>
+        <button id="user" class="sdt-tooltip1"><ion-icon name="person-circle-sharp"></ion-icon>
+            <ul id="mininav">
+                <li><p style="font-size: 12px;background: rgb(37,80,250);color: white;padding: 5px;padding-left: 10px;padding-right: 10px;border-radius: 6px;cursor: pointer;" onclick="javascript:void(0);'">Login/Register</p></li>
+                <li><p style="font-size: 10px;">Takes less than a few seconds</p></li>
+            </ul>
+        </button>
+    </nav>
+    <br/>
+
+  <div class="sdt-services">
+    <h3 style="padding-left: 6%;color: rgb(30,41,59);">Login or Register on SoDogeTip</h3>
+    <p style="padding-left: 6%;color: rgb(30,41,59);">You can use your twitter, reddit or discord account to login or create account on SoDogeTip</p>
+<br/>
+<div id="prttn">
+<div class="sdt-svc-cen">
+        <div style="font-size: 18px;text-align: center;padding: 10px;background: rgb(37,80,250);width: 100%;color: white;"><i class="fa fa-sign-in"></i> Login or Register</div>
+        <br/>
+        <div class="sdt-svc" id="rdlgn">
+          <h2 style="cursor: pointer;" onclick="window.location.href='http://sodogetip.xyz/connect/reddit'"><i class="fa fa-reddit"></i>&nbsp; Continute with Reddit</h2>
+        </div>
+      
+
+        <div class="sdt-svc" id="twlgn">
+         <h2 style="cursor: pointer;" onclick="window.location.href='http://sodogetip.xyz/connect/twitter'"><i class="fa fa-twitter"></i>&nbsp;Continue with Twitter</h2>
+        </div>
+
+        <div class="sdt-svc" id="dsclgn">
+          <h2 style="cursor: pointer;" onclick="window.location.href='http://sodogetip.xyz/connect/discord'"><ion-icon name="logo-discord" class="fa-discord"></ion-icon>&nbsp;Continue with Discord</h2>
+        </div>
+        <br/>
+    </div>
+    <p style="padding-left: 6%;color: rgb(30,41,59);" id="ntst">New to SoDogeTip ? Don't worry, just login with any social media and after logging in you will get an option to create account if you are new to SoDogeTip.</p>
+  </div>
+</div>
+<br>
+
+
+<br/>
+
+        <script type="text/javascript">
+        const sdthamburger = document.querySelector(".sdt-hamburger");
+        const navLinks = document.querySelector(".sdt-nav-links");
+        const links = document.querySelectorAll(".sdt-nav-links li");
+
+        sdthamburger.addEventListener('click', ()=>{
+   //Animate Links
+    navLinks.classList.toggle("open");
+    links.forEach(link => {
+        link.classList.toggle("fade");
+    });
+
+    //sdt-hamburger Animation
+    sdthamburger.classList.toggle("toggle");
+});
+    </script>
+</body>
+</html>
