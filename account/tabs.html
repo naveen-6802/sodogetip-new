@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial;}
+
+/* Style the tab */
+.sdttab {
+  overflow: hidden;
+  background-color: transparent;
+  width: 90%;
+  margin: auto;
+  display: block;
+}
+
+/* Style the buttons inside the tab */
+.sdttab button {
+  background-color: pink;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 15px;
+  transition: 0.3s;
+  font-size: 17px;
+  width: 100%;
+  text-align: left;
+  margin-top: 20px;
+}
+
+/* Change background color of buttons on hover */
+.sdttab button:hover {
+  background-color: red;
+}
+
+/* Style the tab content */
+.sdttabcontent {
+  display: none;
+  padding: 0px;
+  border: 1px solid #ccc;
+  overflow: hidden;
+}
+</style>
+</head>
+<body>
+
+
+<div class="sdttab" id="wow">
+  <button class="tablinks" onclick="openCity(event, 'coins')">Coins</button><br/>
+  <button class="tablinks" onclick="openCity(event, 'personal-info')">Personal Info</button><br/>
+  <button class="tablinks" onclick="openCity(event, 'privacy')">Privacy</button>
+</div>
+
+<div id="coins" class="sdttabcontent">
+  <div onclick="fuck()" style="padding: 10px;cursor: pointer;background: lightblue;width: 100%;"><- Coins</div>
+  <h3>London</h3>
+  <p>London is the capital city of England.</p>
+</div>
+
+<div id="personal-info" class="sdttabcontent">
+  <span onclick="fuck()" style="padding: 10px;cursor: pointer;">x</span>
+  <h3>Paris</h3>
+  <p>Paris is the capital of France.</p> 
+</div>
+
+<div id="privacy" class="sdttabcontent">
+  <span onclick="fuck()" style="padding: 10px;cursor: pointer;">x</span>
+  <h3>Tokyo</h3>
+  <p>Tokyo is the capital of Japan.</p>
+</div>
+
+<script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("sdttabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  document.getElementById("wow").style.display = "none";
+}
+function fuck() {
+  document.getElementById('wow').style.display = 'block';
+  tabcontent = document.getElementsByClassName("sdttabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+}
+</script>
+   
+</body>
+</html> 

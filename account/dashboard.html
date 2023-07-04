@@ -1,0 +1,1854 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=none">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dashboard | SoDogeTip</title>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../navbar.css">
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+<style type="text/css">
+
+nav {
+  box-shadow: none;
+}
+#dbcnt {
+  width: 100%;
+  height: 300px;
+  background: transparent;
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+}
+#lftbr {
+  width: 20%;
+  height: 100%;
+  padding: 20px;
+  background: rgb(30,41,59);
+  background: transparent;
+  word-wrap: break-word;
+  word-break: break-all;
+  position: relative;
+}
+#lftbr a {
+  color: rgb(188,192,182);
+  color: rgb(90,101,119);
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: left;
+  font-size: 13px;
+  font-weight: bold;
+  padding: 10px;
+}
+#lftbr a:hover {
+  color: rgb(30,41,59);
+}
+#clslftbr {
+  display: none;
+}
+#cnbr {
+  width: 80%;
+  height: 100%;
+  padding: 10px;
+  background: transparent;
+}
+#wlcm {
+  padding: 0px;
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  background: transparent;
+  margin-left: auto;
+  margin-right: auto;
+}
+#ac-blnc {
+  width: 90%;
+  margin: auto;
+  display: block;
+  background: rgb(37,80,250);
+  padding: 50px;
+  border-radius: 6px;
+}
+#send-rcv {
+  width: 90%;
+  display: flex;
+  padding: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+#send {
+  padding: 10px;
+  background: transparent;
+  color: rgb(255,69,94);
+  border-radius: 6px;
+  width: 49%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  cursor: pointer;
+  border: 1px solid rgb(255,69,94);
+}
+#send:hover {
+  background: rgb(255,69,94);
+  color: white;
+}
+#rcv {
+  padding: 10px;
+  background: transparent;
+  color: rgb(26,145,70);
+  border-radius: 6px;
+  width: 49%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  cursor: pointer;
+  border: 1px solid rgb(26,145,70);
+}
+#rcv:hover {
+  background: rgb(26,145,70);
+  color: white;
+}
+#tips {
+  width: 100%;
+}
+#user:hover #mininav li {
+  text-transform: uppercase;
+  padding: 10px;
+}
+.lgtbtn {
+  background: white;
+  color: rgb(255,69,94);
+  border: 1px solid rgb(255,69,94);
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.lgtbtn:hover {
+  background: rgb(255,49,74);
+  color: white;
+  border-color: rgb(255,49,74);
+}
+#mobilesb {
+  display: none;
+  width: 100%;
+}
+#dogeprice {
+  padding: 10px;
+  width: 50%;
+}
+#usd-doge, #qrgenerator {
+      padding: 10px;
+      background: transparent;
+      width: 100%;
+      border-radius:6px;
+      position: relative;
+      border:px solid rgb(37,80,250);
+      display: block;
+      margin: auto;
+    }
+    #inuf {
+      padding: 1px;
+      background: transparent;
+      width: 100%;
+      box-sizing: border-box;
+      position: relative;
+    }
+    #dogv, #dolv, #clrud {
+      padding: 10px;
+      width: 100%;
+      outline: none;
+      background: #fff;
+      border: none;
+      box-sizing: border-box;
+      display: block;
+      margin: auto;
+      border-radius: 6px;
+      margin-top: 10px;
+      color: black;
+      border:1px solid rgb(184,184,184);
+    }
+    #qclr, #clrud {
+      color:rgb(255,69,94);
+      border-color: #fff;
+      cursor: pointer;
+      background: transparent;
+      border:1px solid rgb(255,69,94);
+    }
+    #qclr:hover, #clrud:hover {
+      background: rgb(255,69,94);
+      color: white;
+    }
+      #sdt-main-table {
+    background-color: #ffffff;
+  width: 90%;
+  max-width: 100%;
+  max-height: 100%;
+  display: flex;
+  margin: auto;
+  flex-direction: column;
+  border-radius: 6px;
+  overflow: hidden;
+  border:1px solid rgb(37,80,250);
+  border-top:0px;
+  }
+  #sdt-tbl-cncpt {
+    width: 100%;
+  height: 100%;
+  max-height: 100%;
+  overflow: auto;
+  box-sizing: border-box;
+  }
+    .sdt-table {
+
+  border-collapse: collapse;
+  padding: 15px;
+  border: 0px solid rgba(37,80,250,0.3);
+  width: 100%;
+}
+.sdt-table tbody {
+  padding: 20px;
+}
+.sdt-table th , .sdt-table td{
+    text-align: left;
+    padding: 10px;
+    background: transparent;
+    border-bottom: 0px solid rgba(37,80,250,0.3);
+    color: rgb(30,41,59);
+}
+.sdt-table th {
+  background: rgb(242,243,244);
+  background-color: rgb(37,80,250);
+  color: rgb(98,105,118);
+  color: white;
+  text-transform: uppercase;
+  font-size: 10px;
+}
+.sdt-table tr{
+    background-color: transparent;
+}
+.sdt-table tr td {
+  font-size:13px;
+  white-space: nowrap;
+  border-bottom: 1px solid rgba(37,80,250,0.6)
+}
+.sdtPagination li:hover{
+    cursor: pointer;
+}
+ .sdtPagination {
+    display: flex;
+    padding: 0px;
+  }
+  .sdtPagination li {
+    list-style: none;
+  }
+  .sdtPagination li span {
+    background: white;
+    padding: 10px;
+    border: 1px solid rgb(37,80,250);
+    font-size: 15px;
+    margin-left: 5px;
+    border-radius: 6px;
+  }
+  .sdtPagination li span:hover {
+    background: rgb(37,80,250);
+    color: white;
+  }
+  #search_input_all {
+    outline: 0;
+    border:none;
+    height: 100%;
+    padding: 10px;
+    border-radius: 0px;
+    background:rgb(37,80,250);
+    color: white;
+  }
+  #search_input_all::placeholder {
+    color: rgba(255,255,255,0.8);
+  }
+  #search_input_all:focus {
+    background: rgb(37,80,250);
+  }
+  #receive-rqst {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.5);
+    backdrop-filter:blur(6px);
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    white-space: nowrap;
+    z-index: 9999;
+    display: none;
+  }
+  #rrmain {
+    padding: 0px;
+    width: 45%;
+    height: auto;
+    background: white;
+      box-shadow: rgba(255, 255, 255, 0.3) 0px 4px 12px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      perspective: 1000px;
+      overflow-y: auto;
+      overflow-x: hidden;
+      border: 0px solid #fff;
+      border-radius: 6px;
+  }
+  .cptooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.cptooltip .cptooltiptext {
+  visibility: hidden;
+  width: 140px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  top: 150%;
+  left: 50%;
+  margin-left: -75px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  font-size: 14px;
+  word-break: break-word;
+  word-wrap: break-word;
+}
+
+.cptooltip:hover .cptooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+  #qrgenerator {
+      padding: 10px;
+      background: #fff;
+      width: 90%;
+      border-radius:6px;
+      position: relative;
+      border:0px;
+      display: block;
+      margin: auto;
+    }
+    #amnt,#generate, #qclr {
+      padding: 10px;
+      width: 90%;
+      outline: none;
+      background: white;
+      border: none;
+      box-sizing: border-box;
+      display: block;
+      margin: auto;
+      border-radius: 6px;
+      border:1px solid;
+    }
+    #amnt {
+      background: white;
+      color: black;
+      border: 1px solid rgb(184,184,184);
+    }
+    #nadd::placeholder, #amnt::placeholder {
+      color:;
+    }
+    #clrud, #generate, #qclr {
+      cursor: pointer;
+    }
+    #generate, #qclr {
+      width: 40%;
+    }
+    #generate {
+      border-color: rgb(26,145,70);
+      color: rgb(26,145,70);
+    }
+    #generate:hover {
+      background: rgb(26,145,70);
+      color: white;
+      border-color: rgb(26,145,70);
+    }
+    #qclr, #clrud {
+      color:rgb(255,69,94);
+      border-color: rgb(255,69,94);
+    }
+    #qclr:hover, #clrud:hover {
+      border-color: rgb(255,69,94);
+      color: white;
+      background: rgb(255,69,94);
+    }
+    #ndq, #qdn {
+      color: black;
+    }
+    #qttp {
+      position: relative;
+      display: inline-block;
+    }
+    #qttp .ttptxt {
+      visibility: hidden;
+      width: 200px;
+      background-color: #717171;
+      color: #fff;
+      text-align: center;
+      border-radius: 6px;
+      padding: 5px 0;
+      position: absolute;
+      z-index: 1;
+      top: 100%;
+      left: 50%;
+      margin-left: -100px;
+      padding: 10px;
+      white-space: pre-wrap;
+
+    }
+    #qttp:hover .ttptxt {
+      visibility: visible;
+    }
+@media screen and (max-width: 800px){
+  nav {
+    box-shadow: rgba(10, 21, 39, 0.8) 0px 2px 2px;
+  }
+  #lftbr {
+    display: none;
+    position: absolute;
+    padding-top: 10%;
+    top: 0%;
+    left: 0%;
+    width: auto;
+    height: auto;
+    z-index: 1;
+    border-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 0px;
+    background: white;
+
+  box-shadow: rgba(30, 41, 59, 0.3) 0px 4px 12px;
+  }
+  #cnbr {
+    width: 100%;
+  }
+  #wlcm-txt {
+    padding-left: 0px;
+  }
+  #clslftbr {
+    display: block;
+    position: absolute;
+    top: 1%;
+    left: 1%;
+
+  }
+  #mobilesb {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+  }
+  #mobilesb a {
+    color: white;
+    background: rgb(30,41,59);
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    border-radius: 10px;
+  }
+  #user:hover #mininav {
+    z-index: 20;
+  }
+  #rrmain {
+    width: 90%;
+  }
+}
+</style>
+
+</head>
+<body>
+    <nav>
+        <div class="sdt-logo">
+            <img src="../wsdt.png" alt="Logo Image" onclick="window.location.href='../index.html';" style="cursor: pointer;">
+        </div>
+        <div class="sdt-hamburger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+        <ul class="sdt-nav-links">
+            <li><a href="../stats.html">Stats</a></li>
+            <li><a href="../coins.html">Coins</a></li>
+            <li><a href="../donations.html">Donations</a></li>
+            <li><a href="javascript:void(0);">Help <i class="fa fa-angle-down"></i></a>
+                <ul id="mininav" style="z-index: 100;">
+                    <li onclick="window.location.href='../help/faq.html'">FAQ</li>
+                    <li onclick="window.location.href='../help/quick-start.html'">Quick-Start</li>
+                    <li onclick="window.location.href='../help/tip-keyword.html'">Tip Keyword</li>
+                    <li onclick="window.location.href='../help/support.html'">Support</li>
+                </ul>
+            </li>
+        </ul>
+        <button id="user" class="sdt-tooltip1"><ion-icon name="person-circle-sharp"></ion-icon>
+            <ul id="mininav">
+                <li onclick="window.location.href='../index.html'"><span class="lgtbtn"><i class="fa fa-sign-out"></i> Logout</span></li>
+            </ul>
+        </button>
+    </nav>
+
+<div id="receive-rqst">
+  <span style="position: absolute;right: 4%;top:3%;font-size: 30px;cursor: pointer;color: white;" onclick="this.parentElement.style.display = 'none';"><ion-icon name="close-circle"></ion-icon></span>
+  <div id="rrmain" style="word-wrap: break-word;word-break: break-word;">
+    <br/>
+    <div id="your-add" style="background: white;padding:10px;color: #000;width:auto;border:none;word-wrap: break-word;white-space: pre-wrap;word-break: break-word;font-size: 14px;"><center><b>naveen6802</b><br/><span id="maindadd" style="word-wrap: break-word;word-break: break-word;">DGWTPRakYPdLbM55xo3sELrF3F6B1SPjMo</span> <span onclick="myCPFunction()" onmouseout="outCPFunc()" class="cptooltip" style="color: rgb(37,80,250);cursor: pointer;"> Copy<ion-icon name="copy" style="font-size: 11px;color:rgb(37,80,250);"></ion-icon><span class="cptooltiptext" id="cptooltip">Copy to clipboard</span></span></center></div>
+    
+    <center>
+      <img src="" height="150" width="150" id="myqr"><br/>
+      <a id="qdn"><ion-icon name="download"></ion-icon></a><br/>
+      <div style="color: rgb(164,164,164);font-size: 10px;width: 50%;overflow: hidden;white-space: pre-wrap;">Anyone can scan this QR code and send DOGE to you. Send only DOGECOIN(DOGE) to this address.</div>
+    </center>
+    <div id="qrgenerator">
+  <span style="padding-left: 14px;font-size: 12px;">Request doge payment
+    <div id="qttp">
+      <i class="fa fa-question-circle"></i>
+      <span class="ttptxt">When someone scan this requested QR Code, a amount that was set by you will be automatically inputted in sender's input field.</span>
+    </div>
+  </span><br/>
+  <form action="javascript:void(0);" style="margin-top: 8px;">
+<input type="text" id="amnt" name="" placeholder="Set DOGE amount">
+<div style="display: flex;justify-content: space-around;width: 100%;margin-top: 10px;">
+<button id="generate" type="submit">Generate</button>
+<button id="qclr">Reset</button>
+</div>
+</form>
+<div id="damta"></div>
+</div>
+  </div>
+</div>
+
+<div id="dbcnt">
+
+    <div id="lftbr">
+    <a href="javascript:void(0);" style="color: rgb(90,101,119);font-size: 20px;" id="clslftbr" onclick="this.parentElement.style.display = 'none';"><ion-icon name="arrow-back-outline"></ion-icon></a><br/>
+    <a href="javascript:void(0);">Dashboard</a><br/><br/>
+    <a href="withdraw.html">Withdraw</a><br/><br/>
+    <a href="recurrent-tip.html">Recurrent Tips</a><br/><br/>
+    <a href="settings.html">Settings</a><br/><br/>
+    <a href="donate.html">Donate</a><br/><br/>
+    <a href="stats.html">Stats</a><br/><br/>
+    <a href="nft.html">NFT's</a>
+    <br/><br/>
+    <div id="usd-doge">
+  <ion-icon name="swap-vertical-outline" style="font-size: 15px;padding: 5px;background: white;border-radius: 50%;position: absolute;z-index: 100;top: 46%;left: 50%;transform: translate(-50%,-46%);border: 3px solid rgb(184,184,184);"></ion-icon>
+  <span style="padding-left: 0px;font-size: 12px;">USD to DOGE converter</span>
+  <div id="inuf"><input type="text" id="dolv" name="" placeholder="0.00"><img src="usd.png" style="position: absolute;height: 25px;width: 25px;z-index: 100;top: 35%;right: 8%;"></div>
+  <div id="inuf"><input type="text" id="dogv" name="" placeholder="0.00"><img src="dogecoin-300.png" style="position: absolute;height: 25px;width: 25px;z-index: 100;top: 35%;right: 8%;"></div>
+  <button id="clrud">Clear</button>
+</div>
+  </div>
+
+  <div id="cnbr">
+    <div id="mobilesb">
+      <a href="javascript:void(0);" onclick="showmenu()" style="text-decoration: none;"><ion-icon name="apps-outline"></ion-icon> <span style="font-size: 15px;text-decoration: none;">&nbsp; More</span></a> 
+    </div>
+    
+    <div id="wlcm">
+      <div style="width: 50%;">
+      <p id="wlcm-txt">Hello naveen6802,<br/>
+        <strong>Welcome back !</strong>
+      </p>
+    </div>
+      <div id="dogeprice" style="width: 50;">
+      <div style="font-size: 12px;float: right;"><strong>Price(USD)</strong><br/><br/><b><span id="dogepp" style="color: white;background: rgb(242,184,22);padding: 5px;border-radius: 4px;font-size: 15px;"></span></b></div>
+    </div>
+    </div>
+
+    <div id="ac-blnc">
+      <span style="color: white;font-size: 17px;">Balance</span><br/>
+      <span id="balance-doge" style="color: white;font-size: 45px;">Ð<span id="maindogeb">0.42</span></span><br/>
+      <span id="balance-usd" style="color: white;font-size: 15px;">$<span id="mainusdb"></span></span>
+    </div>
+
+    <div id="send-rcv">
+      <div id="send" onclick="window.location.href='withdraw.html';"><span style="font-size: 13px;"><i class="fa fa-arrow-circle-up"></i> Send/Withdraw</span></div>
+      <div id="rcv" onclick="document.getElementById('receive-rqst').style.display = 'block';"><span style="font-size: 13px;"><i class="fa fa-arrow-circle-down"></i> Receive/Request</span></div>
+    </div>
+
+    <div id="tips">
+      <br/>
+      <div class="form-group" style="display: none;">  <!--    Show Numbers Of Rows    -->
+          <select class  ="form-control" name="state" id="maxRows">
+             <option value="6">Show ALL Rows</option>
+             <option value="5">5</option>
+             <option value="10" selected="true">10</option>
+             <option value="15">15</option>
+             <option value="20">20</option>
+             <option value="50">50</option>
+             <option value="70">70</option>
+             <option value="100">100</option>
+            </select>
+          
+          </div>
+          
+      <div id="sdt-main-table">
+
+<div style="display: flex;justify-content: space-between;background: rgb(37,80,250);box-sizing: border-box;width: 100%;box-sizing: border-box;font-size: 15px;padding: 0px;border: none;color: #fff;"><span style="padding: 10px;">Tips</span> <span class="tb_search" style="float: right;width: 50%;">
+<input type="text" id="search_input_all" onkeyup="FilterkeyWord_all_table()" placeholder="Search..." class="form-control" style="width: 100%;">
+        </span></div>
+<div id="sdt-tbl-cncpt">
+<table id="sdt-table-id" class="sdt-table">
+  <thead>
+    <tr>
+      <th></th>
+      <th>Date</th>
+      <th>Actions</th>
+      <th>Amount</th>
+      <th>Coin</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr>
+   <td>
+   </td>
+   <td>Oct 4, 2022, 6:11 PM</td>
+   <td>
+      <i class="fa fa-twitter"></i>
+      Received from sir_cheems
+   </td>
+   <td>0.42 </td>
+   <td>doge</td>
+   <td>
+      <div data-bs-toggle="tooltip" data-bs-placement="top"
+         title="TxID : 05b2751c52cb85e6f2aa721209d4be14a6246b681c87a3551c845a458a0d3cd5">
+         <span class="badge bg-success me-1"></span> <a
+            href="https://chain.so/tx/doge/05b2751c52cb85e6f2aa721209d4be14a6246b681c87a3551c845a458a0d3cd5">Finished</a>
+      </div>
+   </td>
+   
+</tr>
+<tr>
+   <td>
+   </td>
+   <td>Sep 16, 2022, 1:28 PM</td>
+   <td>
+      <i class="fa fa-twitter"></i>
+      Received from sir_cheems
+   </td>
+   <td>0.69 </td>
+   <td>doge</td>
+   <td>
+      <div data-bs-toggle="tooltip" data-bs-placement="top"
+         title="TxID : 45ef34d09fc08996f58b0f110dfdb8017e08df1cecc8caafa9d2cd8b98385e0b">
+         <span class="badge bg-success me-1"></span> <a
+            href="https://chain.so/tx/doge/45ef34d09fc08996f58b0f110dfdb8017e08df1cecc8caafa9d2cd8b98385e0b">Finished</a>
+      </div>
+   </td>
+   
+</tr>
+<tr>
+   <td>
+   </td>
+   <td>Jul 9, 2022, 8:56 PM</td>
+   <td>
+      <i class="fa fa-twitter"></i>
+      Received from UpdateRail
+   </td>
+   <td>1.42 </td>
+   <td>doge</td>
+   <td>
+      <div data-bs-toggle="tooltip" data-bs-placement="top"
+         title="TxID : 3d8fb086ecc380d7e49a0f4e2b19e3e4e786239d1e041897619648de9417739a">
+         <span class="badge bg-success me-1"></span> <a
+            href="https://chain.so/tx/doge/3d8fb086ecc380d7e49a0f4e2b19e3e4e786239d1e041897619648de9417739a">Finished</a>
+      </div>
+   </td>
+   
+</tr>
+<tr>
+   <td>
+   </td>
+   <td>Jul 3, 2022, 5:11 PM</td>
+   <td>
+      <i class="fa fa-twitter"></i>
+      Sent to 13sunim001
+   </td>
+   <td>6.9 </td>
+   <td>doge</td>
+   <td>
+      Tip expired
+   </td>
+   
+</tr>
+<tr>
+   <td>
+   </td>
+   <td>Jun 28, 2022, 5:10 PM</td>
+   <td>
+      <i class="fa fa-twitter"></i>
+      Sent to HODLdogeNOTdebt
+   </td>
+   <td>6.9 </td>
+   <td>doge</td>
+   <td>
+      <div data-bs-toggle="tooltip" data-bs-placement="top"
+         title="TxID : cbc7f1b7b5564d55554df5edc98ff9f61e270ce54e90e0b1f93f494bdf0c0ec5">
+         <span class="badge bg-success me-1"></span> <a
+            href="https://chain.so/tx/doge/cbc7f1b7b5564d55554df5edc98ff9f61e270ce54e90e0b1f93f494bdf0c0ec5">Processed need reply/verify comment</a>
+      </div>
+   </td>
+   
+</tr>
+<tr>
+   <td>
+   </td>
+   <td>Jun 28, 2022, 1:59 PM</td>
+   <td>
+      <i class="fa fa-twitter"></i>
+      Received from sir_cheems
+   </td>
+   <td>1.11 </td>
+   <td>doge</td>
+   <td>
+      <div data-bs-toggle="tooltip" data-bs-placement="top"
+         title="TxID : 76292c84617ea8ae534f8bbad3e1c0aa9d64e05bc214dfdc5f48fa9a225428ff">
+         <span class="badge bg-success me-1"></span> <a
+            href="https://chain.so/tx/doge/76292c84617ea8ae534f8bbad3e1c0aa9d64e05bc214dfdc5f48fa9a225428ff">Processed need reply/verify comment</a>
+      </div>
+   </td>
+   
+</tr>
+<tr>
+   <td>
+   </td>
+   <td>Jun 21, 2022, 1:42 PM</td>
+   <td>
+      <i class="fa fa-twitter"></i>
+      Received from sir_cheems
+   </td>
+   <td>0.242 </td>
+   <td>doge</td>
+   <td>
+      <div data-bs-toggle="tooltip" data-bs-placement="top"
+         title="TxID : 0cb9c6f38d3776b6064e1f47742335a6ab6aa546b7b1b1823e9c69ae1f0ad7e5">
+         <span class="badge bg-success me-1"></span> <a
+            href="https://chain.so/tx/doge/0cb9c6f38d3776b6064e1f47742335a6ab6aa546b7b1b1823e9c69ae1f0ad7e5">Processed need reply/verify comment</a>
+      </div>
+   </td>
+   
+</tr>
+<tr>
+   <td>
+   </td>
+   <td>Jun 16, 2022, 7:55 PM</td>
+   <td>
+      <i class="fa fa-twitter"></i>
+      Received from sir_cheems
+   </td>
+   <td>0.142 </td>
+   <td>doge</td>
+   <td>
+      <div data-bs-toggle="tooltip" data-bs-placement="top"
+         title="TxID : 6cb9cfb67b5d26e805b354cc2a9b3a280fb6e703dd11c36a4a3b224af73b8bc3">
+         <span class="badge bg-success me-1"></span> <a
+            href="https://chain.so/tx/doge/6cb9cfb67b5d26e805b354cc2a9b3a280fb6e703dd11c36a4a3b224af73b8bc3">Processed need reply/verify comment</a>
+      </div>
+   </td>
+   
+</tr>
+<tr>
+   <td>
+   </td>
+   <td>Jun 10, 2022, 1:13 PM</td>
+   <td>
+      <i class="fa fa-globe"></i>
+      Withdraw to address-D6XGXfT4YToQeyTJ8sU1srAEPne4FC4FdE
+   </td>
+   <td>6.11 </td>
+   <td>doge</td>
+   <td>
+      <div data-bs-toggle="tooltip" data-bs-placement="top"
+         title="TxID : 4799123bf1825b5bad18cb5e68b42509247965f3f7eb27a860c301721f34d7c9">
+         <span class="badge bg-success me-1"></span> <a
+            href="https://chain.so/tx/doge/4799123bf1825b5bad18cb5e68b42509247965f3f7eb27a860c301721f34d7c9">Processed need reply/verify comment</a>
+      </div>
+   </td>
+   
+</tr>
+<tr>
+   <td>
+   </td>
+   <td>Jun 9, 2022, 2:38 PM</td>
+   <td>
+      <i class="fa fa-twitter"></i>
+      Received from 070guy
+   </td>
+   <td>1.42069 </td>
+   <td>doge</td>
+   <td>
+      <div data-bs-toggle="tooltip" data-bs-placement="top"
+         title="TxID : 06b4326f55dc1a311d6b12658a1d5c1c64906d91c05a257f80738917fec19506">
+         <span class="badge bg-success me-1"></span> <a
+            href="https://chain.so/tx/doge/06b4326f55dc1a311d6b12658a1d5c1c64906d91c05a257f80738917fec19506">Processed need reply/verify comment</a>
+      </div>
+   </td>
+   
+</tr>
+<tr>
+   <td>
+   </td>
+   <td>Jun 14, 2022, 5:21 AM</td>
+   <td>
+      <i class="fa fa-globe"></i>
+      Withdraw to address-D6XGXfT4YToQeyTJ8sU1srAEPne4FC4FdE
+   </td>
+   <td>4.6 </td>
+   <td>doge</td>
+   <td>
+      Withdraw expired
+   </td>
+   
+</tr>
+<tr>
+   <td>
+   </td>
+   <td>Jun 14, 2022, 5:15 AM</td>
+   <td>
+      <i class="fa fa-globe"></i>
+      Withdraw to address-D6XGXfT4YToQeyTJ8sU1srAEPne4FC4FdE
+   </td>
+   <td>4.6 </td>
+   <td>doge</td>
+   <td>
+      Withdraw expired
+   </td>
+   
+</tr>
+<tr>
+   <td>
+   </td>
+   <td>Jun 9, 2022, 5:13 AM</td>
+   <td>
+      <i class="fa fa-globe"></i>
+      Withdraw to address-D6XGXfT4YToQeyTJ8sU1srAEPne4FC4FdE
+   </td>
+   <td>4.6881 </td>
+   <td>doge</td>
+   <td>
+      Error
+   </td>
+   
+</tr>
+<tr>
+   <td>
+   </td>
+   <td>Jun 13, 2022, 4:06 AM</td>
+   <td>
+      <i class="fa fa-twitter"></i>
+      Sent to 13sunim001
+   </td>
+   <td>4.2069 </td>
+   <td>doge</td>
+   <td>
+      Tip expired
+   </td>
+   
+</tr>
+<tr>
+   <td>
+   </td>
+   <td>Jun 7, 2022, 9:05 PM</td>
+   <td>
+      <i class="fa fa-twitter"></i>
+      Received from Joachim62023556
+   </td>
+   <td>4.69 </td>
+   <td>doge</td>
+   <td>
+      <div data-bs-toggle="tooltip" data-bs-placement="top"
+         title="TxID : 9d20dd918aed5495b807f4d0cd65d98074a49533045c68f6e6482c9792ff8614">
+         <span class="badge bg-success me-1"></span> <a
+            href="https://chain.so/tx/doge/9d20dd918aed5495b807f4d0cd65d98074a49533045c68f6e6482c9792ff8614">Processed need reply/verify comment</a>
+      </div>
+   </td>
+   
+</tr>
+<tr>
+   <td>
+   </td>
+   <td>May 18, 2022, 12:26 AM</td>
+   <td>
+      <i class="fa fa-globe"></i>
+      Withdraw to address-DPgHsMvzuZYJxrGK2KXuJ4rScsYAHc4bG3
+   </td>
+   <td>4.20467 </td>
+   <td>doge</td>
+   <td>
+      <div data-bs-toggle="tooltip" data-bs-placement="top"
+         title="TxID : cb16520a9efca34e0017ce7d4cc16b11c545bf0e4db1d115e019766323f2839a">
+         <span class="badge bg-success me-1"></span> <a
+            href="https://chain.so/tx/doge/cb16520a9efca34e0017ce7d4cc16b11c545bf0e4db1d115e019766323f2839a">Finished</a>
+      </div>
+   </td>
+   
+</tr>
+<tr>
+   <td>
+   </td>
+   <td>Apr 29, 2022, 12:07 PM</td>
+   <td>
+      <i class="fa fa-twitter"></i>
+      Received from HODLdogeNOTdebt
+   </td>
+   <td>4.2069 </td>
+   <td>doge</td>
+   <td>
+      <div data-bs-toggle="tooltip" data-bs-placement="top"
+         title="TxID : a9a7ca74a9cadce8944a7aa700e8183ba17a768f7bd28b788358863e6579151a">
+         <span class="badge bg-success me-1"></span> <a
+            href="https://chain.so/tx/doge/a9a7ca74a9cadce8944a7aa700e8183ba17a768f7bd28b788358863e6579151a">Finished</a>
+      </div>
+   </td>
+   
+</tr>
+<tr>
+   <td>
+   </td>
+   <td>Apr 12, 2022, 7:45 PM</td>
+   <td>
+      <i class="fa fa-twitter"></i>
+      Sent to SmilingBoy123
+   </td>
+   <td>0.2981 </td>
+   <td>doge</td>
+   <td>
+      <div data-bs-toggle="tooltip" data-bs-placement="top"
+         title="TxID : 6f17c18f013a47b3fa2346bbc789adff274f3df846a0b499e98ff08668e5c9d1">
+         <span class="badge bg-success me-1"></span> <a
+            href="https://chain.so/tx/doge/6f17c18f013a47b3fa2346bbc789adff274f3df846a0b499e98ff08668e5c9d1">Finished</a>
+      </div>
+   </td>
+   
+</tr>
+<tr>
+   <td>
+   </td>
+   <td>Apr 12, 2022, 7:30 PM</td>
+   <td>
+      <i class="fa fa-twitter"></i>
+      Sent to HODLdogeNOTdebt
+   </td>
+   <td>0.6942 </td>
+   <td>doge</td>
+   <td>
+      <div data-bs-toggle="tooltip" data-bs-placement="top"
+         title="TxID : 2bc0ab3d58bd2999af6b9c911dac087228daddacd7e164d71bb1aed213f6d62d">
+         <span class="badge bg-success me-1"></span> <a
+            href="https://chain.so/tx/doge/2bc0ab3d58bd2999af6b9c911dac087228daddacd7e164d71bb1aed213f6d62d">Finished</a>
+      </div>
+   </td>
+   
+</tr>
+<tr>
+   <td>
+   </td>
+   <td>Apr 12, 2022, 4:31 PM</td>
+   <td>
+      <i class="fa fa-twitter"></i>
+      Received from Max70092843
+   </td>
+   <td>1 </td>
+   <td>doge</td>
+   <td>
+      <div data-bs-toggle="tooltip" data-bs-placement="top"
+         title="TxID : fdc967cac2aef555a7dc62a956e0f462fb1d5b079c0fedb065d49ecb2bdabb09">
+         <span class="badge bg-success me-1"></span> <a
+            href="https://chain.so/tx/doge/fdc967cac2aef555a7dc62a956e0f462fb1d5b079c0fedb065d49ecb2bdabb09">Finished</a>
+      </div>
+   </td>
+   
+</tr>
+<tr>
+   <td>
+   </td>
+   <td>Apr 11, 2022, 2:47 PM</td>
+   <td>
+      <i class="fa fa-twitter"></i>
+      Sent to HODLdogeNOTdebt
+   </td>
+   <td>0.069 </td>
+   <td>doge</td>
+   <td>
+      <div data-bs-toggle="tooltip" data-bs-placement="top"
+         title="TxID : 0818a2e21be11324d2b6a91bdbf9fc2048c84c6c137b0ba75d9d886d6c130aaf">
+         <span class="badge bg-success me-1"></span> <a
+            href="https://chain.so/tx/doge/0818a2e21be11324d2b6a91bdbf9fc2048c84c6c137b0ba75d9d886d6c130aaf">Finished</a>
+      </div>
+   </td>
+   
+</tr>
+<tr>
+   <td>
+   </td>
+   <td>Apr 10, 2022, 7:04 PM</td>
+   <td>
+      <i class="fa fa-twitter"></i>
+      Sent to BillyM2k
+   </td>
+   <td>0.08 </td>
+   <td>doge</td>
+   <td>
+      Error
+   </td>
+   
+</tr>
+<tr>
+   <td>
+   </td>
+   <td>Apr 6, 2022, 3:28 AM</td>
+   <td>
+      <i class="fa fa-globe"></i>
+      Withdraw to address-DPgHsMvzuZYJxrGK2KXuJ4rScsYAHc4bG3
+   </td>
+   <td>107.4 </td>
+   <td>doge</td>
+   <td>
+      <div data-bs-toggle="tooltip" data-bs-placement="top"
+         title="TxID : 8d8c3a7668ec452d8e42e343c92ed0de546355954995ea0f1b81bfde01a3be65">
+         <span class="badge bg-success me-1"></span> <a
+            href="https://chain.so/tx/doge/8d8c3a7668ec452d8e42e343c92ed0de546355954995ea0f1b81bfde01a3be65">Finished</a>
+      </div>
+   </td>
+   
+</tr>
+<tr>
+   <td>
+   </td>
+   <td>Apr 6, 2022, 2:51 AM</td>
+   <td>
+      <i class="fa fa-twitter"></i>
+      Received from 13dogecoin
+   </td>
+   <td>6.802 </td>
+   <td>doge</td>
+   <td>
+      <div data-bs-toggle="tooltip" data-bs-placement="top"
+         title="TxID : 96473c4114582e98e09b3063cfb17f9932ca16fa83327db2bbcf8b26de0e0ae8">
+         <span class="badge bg-success me-1"></span> <a
+            href="https://chain.so/tx/doge/96473c4114582e98e09b3063cfb17f9932ca16fa83327db2bbcf8b26de0e0ae8">Finished</a>
+      </div>
+   </td>
+   
+</tr>
+<tr>
+   <td>
+   </td>
+   <td>Apr 6, 2022, 2:52 AM</td>
+   <td>
+      <i class="fa fa-twitter"></i>
+      Received from HODLdogeNOTdebt
+   </td>
+   <td>100.421 </td>
+   <td>doge</td>
+   <td>
+      <div data-bs-toggle="tooltip" data-bs-placement="top"
+         title="TxID : 2aef7418ac1965e26ba7e1ecc40398466f11d7c2d3e2f66e3d4164b32100fbcf">
+         <span class="badge bg-success me-1"></span> <a
+            href="https://chain.so/tx/doge/2aef7418ac1965e26ba7e1ecc40398466f11d7c2d3e2f66e3d4164b32100fbcf">Finished</a>
+      </div>
+   </td>
+   
+</tr>
+<tr>
+   <td>
+   </td>
+   <td>Apr 5, 2022, 7:42 PM</td>
+   <td>
+      <i class="fa fa-globe"></i>
+      Withdraw to address-DPgHsMvzuZYJxrGK2KXuJ4rScsYAHc4bG3
+   </td>
+   <td>4.26432 </td>
+   <td>doge</td>
+   <td>
+      Error
+   </td>
+   
+</tr>
+<tr>
+   <td>
+   </td>
+   <td>Apr 5, 2022, 7:38 PM</td>
+   <td>
+      <i class="fa fa-globe"></i>
+      Withdraw to address-DPgHsMvzuZYJxrGK2KXuJ4rScsYAHc4bG3
+   </td>
+   <td>4.26432 </td>
+   <td>doge</td>
+   <td>
+      Error
+   </td>
+   
+</tr>
+<tr>
+   <td>
+   </td>
+   <td>Apr 5, 2022, 7:45 PM</td>
+   <td>
+      <i class="fa fa-globe"></i>
+      Withdraw to address-DPgHsMvzuZYJxrGK2KXuJ4rScsYAHc4bG3
+   </td>
+   <td>4 </td>
+   <td>doge</td>
+   <td>
+      <div data-bs-toggle="tooltip" data-bs-placement="top"
+         title="TxID : e21276e9ca46bb62f1e87d97e1bf86ee3f5952373cbf190d01e68c82cba492c5">
+         <span class="badge bg-success me-1"></span> <a
+            href="https://chain.so/tx/doge/e21276e9ca46bb62f1e87d97e1bf86ee3f5952373cbf190d01e68c82cba492c5">Finished</a>
+      </div>
+   </td>
+   
+</tr>
+<tr>
+   <td>
+   </td>
+   <td>Apr 5, 2022, 7:21 PM</td>
+   <td>
+      <i class="fa fa-twitter"></i>
+      Received from doge369420
+   </td>
+   <td>4.2 </td>
+   <td>doge</td>
+   <td>
+      <div data-bs-toggle="tooltip" data-bs-placement="top"
+         title="TxID : ff95982dea4a00dcebda95462455144fe5098e6de6024efb64cc0d2541ad6ca6">
+         <span class="badge bg-success me-1"></span> <a
+            href="https://chain.so/tx/doge/ff95982dea4a00dcebda95462455144fe5098e6de6024efb64cc0d2541ad6ca6">Finished</a>
+      </div>
+   </td>
+   
+</tr>
+<tr>
+   <td>
+   </td>
+   <td>Apr 5, 2022, 7:04 PM</td>
+   <td>
+      <i class="fa fa-globe"></i>
+      Withdraw to address-DPgHsMvzuZYJxrGK2KXuJ4rScsYAHc4bG3
+   </td>
+   <td>69.6858 </td>
+   <td>doge</td>
+   <td>
+      <div data-bs-toggle="tooltip" data-bs-placement="top"
+         title="TxID : a96e38abda6a3106ae44cbd3ee19f1d3185466287419a46958cec69dab0f4b3c">
+         <span class="badge bg-success me-1"></span> <a
+            href="https://chain.so/tx/doge/a96e38abda6a3106ae44cbd3ee19f1d3185466287419a46958cec69dab0f4b3c">Finished</a>
+      </div>
+   </td>
+   
+</tr>
+<tr>
+   <td>
+   </td>
+   <td>Apr 5, 2022, 6:50 PM</td>
+   <td>
+      <i class="fa fa-twitter"></i>
+      Received from SmilingBoy123
+   </td>
+   <td>0.06942 </td>
+   <td>doge</td>
+   <td>
+      <div data-bs-toggle="tooltip" data-bs-placement="top"
+         title="TxID : f6b81f0f05dd28384f63b913fff61f76e9b730b463a89d06d8dc5620c0de420f">
+         <span class="badge bg-success me-1"></span> <a
+            href="https://chain.so/tx/doge/f6b81f0f05dd28384f63b913fff61f76e9b730b463a89d06d8dc5620c0de420f">Finished</a>
+      </div>
+   </td>
+   
+</tr>
+<tr>
+   <td>
+   </td>
+   <td>Apr 5, 2022, 6:05 PM</td>
+   <td>
+      <i class="fa fa-twitter"></i>
+      Received from inevitable360
+   </td>
+   <td>69.42 </td>
+   <td>doge</td>
+   <td>
+      <div data-bs-toggle="tooltip" data-bs-placement="top"
+         title="TxID : 2dc6fda04263402233bb8cbf5c71eb3eb7fe26bc067c4eced989da24069a4754">
+         <span class="badge bg-success me-1"></span> <a
+            href="https://chain.so/tx/doge/2dc6fda04263402233bb8cbf5c71eb3eb7fe26bc067c4eced989da24069a4754">Finished</a>
+      </div>
+   </td>
+   
+</tr>
+<tr>
+   <td>
+   </td>
+   <td>Apr 5, 2022, 2:51 PM</td>
+   <td>
+      <i class="fa fa-twitter"></i>
+      Sent to kiteboarderdoge
+   </td>
+   <td>0.42 </td>
+   <td>doge</td>
+   <td>
+      <div data-bs-toggle="tooltip" data-bs-placement="top"
+         title="TxID : 2796375c220f2f5b2f5800e2437bb451062e0d2fcc50b5f93e341d424d0d0408">
+         <span class="badge bg-success me-1"></span> <a
+            href="https://chain.so/tx/doge/2796375c220f2f5b2f5800e2437bb451062e0d2fcc50b5f93e341d424d0d0408">Finished</a>
+      </div>
+   </td>
+   
+</tr>
+<tr>
+   <td>
+   </td>
+   <td>Apr 5, 2022, 10:20 AM</td>
+   <td>
+      <i class="fa fa-twitter"></i>
+      Received from 070guy
+   </td>
+   <td>0.69 </td>
+   <td>doge</td>
+   <td>
+      <div data-bs-toggle="tooltip" data-bs-placement="top"
+         title="TxID : 602cea733c69993ea9c6dff9ec3f8008886e7af2340bbfdb8729c9c3eb4a61cb">
+         <span class="badge bg-success me-1"></span> <a
+            href="https://chain.so/tx/doge/602cea733c69993ea9c6dff9ec3f8008886e7af2340bbfdb8729c9c3eb4a61cb">Finished</a>
+      </div>
+   </td>
+   
+</tr>
+<tr>
+   <td>
+   </td>
+   <td>Mar 31, 2022, 12:19 PM</td>
+   <td>
+      <i class="fa fa-globe"></i>
+      Withdraw to address-DPgHsMvzuZYJxrGK2KXuJ4rScsYAHc4bG3
+   </td>
+   <td>6.89777 </td>
+   <td>doge</td>
+   <td>
+      <div data-bs-toggle="tooltip" data-bs-placement="top"
+         title="TxID : 73aa71965e7c3f01eb43d62364125e6c604071c33faa8e5b6fc8a6c2ba083ea2">
+         <span class="badge bg-success me-1"></span> <a
+            href="https://chain.so/tx/doge/73aa71965e7c3f01eb43d62364125e6c604071c33faa8e5b6fc8a6c2ba083ea2">Finished</a>
+      </div>
+   </td>
+   
+</tr>
+<tr>
+   <td>
+   </td>
+   <td>Mar 31, 2022, 11:54 AM</td>
+   <td>
+      <i class="fa fa-twitter"></i>
+      Received from dogesuppporteam
+   </td>
+   <td>6.9 </td>
+   <td>doge</td>
+   <td>
+      <div data-bs-toggle="tooltip" data-bs-placement="top"
+         title="TxID : e5623f42cf53010cc8eff0f56d202c7c752152640372f3a2ffe01be07693b770">
+         <span class="badge bg-success me-1"></span> <a
+            href="https://chain.so/tx/doge/e5623f42cf53010cc8eff0f56d202c7c752152640372f3a2ffe01be07693b770">Finished</a>
+      </div>
+   </td>
+   
+</tr>
+<tr>
+   <td>
+   </td>
+   <td>Mar 30, 2022, 3:45 PM</td>
+   <td>
+      <i class="fa fa-globe"></i>
+      Withdraw to address-DPgHsMvzuZYJxrGK2KXuJ4rScsYAHc4bG3
+   </td>
+   <td>1.41846 </td>
+   <td>doge</td>
+   <td>
+      <div data-bs-toggle="tooltip" data-bs-placement="top"
+         title="TxID : fbb1a2dfd36599ab23661edd83efcf5c2429ba8a511e7c5f6194c6a1ac6d310a">
+         <span class="badge bg-success me-1"></span> <a
+            href="https://chain.so/tx/doge/fbb1a2dfd36599ab23661edd83efcf5c2429ba8a511e7c5f6194c6a1ac6d310a">Finished</a>
+      </div>
+   </td>
+   
+</tr>
+<tr>
+   <td>
+   </td>
+   <td>Mar 30, 2022, 3:38 PM</td>
+   <td>
+      <i class="fa fa-twitter"></i>
+      Received from 070guy
+   </td>
+   <td>1.42069 </td>
+   <td>doge</td>
+   <td>
+      <div data-bs-toggle="tooltip" data-bs-placement="top"
+         title="TxID : 2365e350e2c8fcf74e5232c480d76e949c86d9c99438d0ccb86f16492394bd17">
+         <span class="badge bg-success me-1"></span> <a
+            href="https://chain.so/tx/doge/2365e350e2c8fcf74e5232c480d76e949c86d9c99438d0ccb86f16492394bd17">Finished</a>
+      </div>
+   </td>
+   
+</tr>
+<tr>
+   <td>
+   </td>
+   <td>Mar 30, 2022, 12:36 PM</td>
+   <td>
+      <i class="fa fa-twitter"></i>
+      Sent to 070guy
+   </td>
+   <td>0.35 </td>
+   <td>doge</td>
+   <td>
+      <div data-bs-toggle="tooltip" data-bs-placement="top"
+         title="TxID : f699a1dcc02f1fac57d2581aad119b8f803f01fc6b27a185184f4d7378bd670c">
+         <span class="badge bg-success me-1"></span> <a
+            href="https://chain.so/tx/doge/f699a1dcc02f1fac57d2581aad119b8f803f01fc6b27a185184f4d7378bd670c">Finished</a>
+      </div>
+   </td>
+   
+</tr>
+<tr>
+   <td>
+   </td>
+   <td>Mar 30, 2022, 3:46 AM</td>
+   <td>
+      <i class="fa fa-twitter"></i>
+      Sent to HODLdogeNOTdebt
+   </td>
+   <td>1.42069 </td>
+   <td>doge</td>
+   <td>
+      <div data-bs-toggle="tooltip" data-bs-placement="top"
+         title="TxID : a0021d63d5f104520ff297717efd2fb4c671a0ccccec205dcd0bb18603defc52">
+         <span class="badge bg-success me-1"></span> <a
+            href="https://chain.so/tx/doge/a0021d63d5f104520ff297717efd2fb4c671a0ccccec205dcd0bb18603defc52">Finished</a>
+      </div>
+   </td>
+   
+</tr>
+<tr>
+   <td>
+   </td>
+   <td>Mar 30, 2022, 3:45 AM</td>
+   <td>
+      <i class="fa fa-twitter"></i>
+      Sent to MyDogeCTO
+   </td>
+   <td>1 </td>
+   <td>doge</td>
+   <td>
+      <div data-bs-toggle="tooltip" data-bs-placement="top"
+         title="TxID : 98b8f6b92972979ee2b6cd5097ef068f0f879fb94fd5d77aca9b64eb2335826d">
+         <span class="badge bg-success me-1"></span> <a
+            href="https://chain.so/tx/doge/98b8f6b92972979ee2b6cd5097ef068f0f879fb94fd5d77aca9b64eb2335826d">Finished</a>
+      </div>
+   </td>
+   
+</tr>
+<tr>
+   <td>
+   </td>
+   <td>Mar 30, 2022, 3:37 AM</td>
+   <td>
+      <i class="fa fa-twitter"></i>
+      Sent to HODLdogeNOTdebt
+   </td>
+   <td>1.42069 </td>
+   <td>doge</td>
+   <td>
+      <div data-bs-toggle="tooltip" data-bs-placement="top"
+         title="TxID : 6e2a5e5669611771dde8e53f2c4a68aa9b2640cead138b43a44c57a4b24b4fb3">
+         <span class="badge bg-success me-1"></span> <a
+            href="https://chain.so/tx/doge/6e2a5e5669611771dde8e53f2c4a68aa9b2640cead138b43a44c57a4b24b4fb3">Finished</a>
+      </div>
+   </td>
+   
+</tr>
+<tr>
+   <td>
+   </td>
+   <td>Mar 29, 2022, 8:37 PM</td>
+   <td>
+      <i class="fa fa-twitter"></i>
+      Received from HODLdogeNOTdebt
+   </td>
+   <td>4.2069 </td>
+   <td>doge</td>
+   <td>
+      <div data-bs-toggle="tooltip" data-bs-placement="top"
+         title="TxID : efb4c706c53f4a25f80cea4220b4b8ea98dd9179eefc784f12fbb0e4fadcf583">
+         <span class="badge bg-success me-1"></span> <a
+            href="https://chain.so/tx/doge/efb4c706c53f4a25f80cea4220b4b8ea98dd9179eefc784f12fbb0e4fadcf583">Finished</a>
+      </div>
+   </td>
+   
+</tr>
+<tr>
+   <td>
+   </td>
+   <td>Mar 28, 2022, 7:27 PM</td>
+   <td>
+      <i class="fa fa-globe"></i>
+      Withdraw to address-DPgHsMvzuZYJxrGK2KXuJ4rScsYAHc4bG3
+   </td>
+   <td>1.42067 </td>
+   <td>doge</td>
+   <td>
+      <div data-bs-toggle="tooltip" data-bs-placement="top"
+         title="TxID : 2595323caa8a601bc20635ae7a888c91b8a39e994909e5599a77c9e4c4112444">
+         <span class="badge bg-success me-1"></span> <a
+            href="https://chain.so/tx/doge/2595323caa8a601bc20635ae7a888c91b8a39e994909e5599a77c9e4c4112444">Finished</a>
+      </div>
+   </td>
+   
+</tr>
+<tr>
+   <td>
+   </td>
+   <td>Mar 28, 2022, 7:08 PM</td>
+   <td>
+      <i class="fa fa-twitter"></i>
+      Received from 070guy
+   </td>
+   <td>1.42069 </td>
+   <td>doge</td>
+   <td>
+      <div data-bs-toggle="tooltip" data-bs-placement="top"
+         title="TxID : a34f6d927a543057af0dea4aeaaf06887f76bafe5aff57f27edacb4ccb169471">
+         <span class="badge bg-success me-1"></span> <a
+            href="https://chain.so/tx/doge/a34f6d927a543057af0dea4aeaaf06887f76bafe5aff57f27edacb4ccb169471">Finished</a>
+      </div>
+   </td>
+   
+</tr>
+<tr>
+   <td>
+   </td>
+   <td>Mar 24, 2022, 1:55 AM</td>
+   <td>
+      <i class="fa fa-globe"></i>
+      Withdraw to address-DPgHsMvzuZYJxrGK2KXuJ4rScsYAHc4bG3
+   </td>
+   <td>4.20467 </td>
+   <td>doge</td>
+   <td>
+      <div data-bs-toggle="tooltip" data-bs-placement="top"
+         title="TxID : 00010c545f158495f503815dc40b2c399bdfd85ffff629372d7bd85a5813d068">
+         <span class="badge bg-success me-1"></span> <a
+            href="https://chain.so/tx/doge/00010c545f158495f503815dc40b2c399bdfd85ffff629372d7bd85a5813d068">Finished</a>
+      </div>
+   </td>
+   
+</tr>
+<tr>
+   <td>
+   </td>
+   <td>Mar 23, 2022, 9:07 PM</td>
+   <td>
+      <i class="fa fa-twitter"></i>
+      Received from 070guy
+   </td>
+   <td>4.2069 </td>
+   <td>doge</td>
+   <td>
+      <div data-bs-toggle="tooltip" data-bs-placement="top"
+         title="TxID : 77d52062a1476f62571faab3c7d0ed3f3178347a3da155a372d44555a06e6f48">
+         <span class="badge bg-success me-1"></span> <a
+            href="https://chain.so/tx/doge/77d52062a1476f62571faab3c7d0ed3f3178347a3da155a372d44555a06e6f48">Finished</a>
+      </div>
+   </td>
+   
+</tr>
+<tr>
+   <td>
+   </td>
+   <td>Mar 23, 2022, 3:59 AM</td>
+   <td>
+      <i class="fa fa-globe"></i>
+      Withdraw to address-DPgHsMvzuZYJxrGK2KXuJ4rScsYAHc4bG3
+   </td>
+   <td>4.2 </td>
+   <td>doge</td>
+   <td>
+      <div data-bs-toggle="tooltip" data-bs-placement="top"
+         title="TxID : cc803efe33287ea6e28a31edf31b7cb80571de22aebacbdd4e0b51ff626cf0a2">
+         <span class="badge bg-success me-1"></span> <a
+            href="https://chain.so/tx/doge/cc803efe33287ea6e28a31edf31b7cb80571de22aebacbdd4e0b51ff626cf0a2">Finished</a>
+      </div>
+   </td>
+   
+</tr>
+<tr>
+   <td>
+   </td>
+   <td>Mar 28, 2022, 2:56 AM</td>
+   <td>
+      <i class="fa fa-globe"></i>
+      Withdraw to address-DPgHsMvzuZYJxrGK2KXuJ4rScsYAHc4bG3
+   </td>
+   <td>4.2069 </td>
+   <td>doge</td>
+   <td>
+      Withdraw expired
+   </td>
+   
+</tr>
+<tr>
+   <td>
+   </td>
+   <td>Mar 23, 2022, 1:22 AM</td>
+   <td>
+      <i class="fa fa-twitter"></i>
+      Received from HODLdogeNOTdebt
+   </td>
+   <td>4.2069 </td>
+   <td>doge</td>
+   <td>
+      <div data-bs-toggle="tooltip" data-bs-placement="top"
+         title="TxID : 3a431a75d45ac0b64110ac7e0799f858d544199a9204614c523e43f52ed60d76">
+         <span class="badge bg-success me-1"></span> <a
+            href="https://chain.so/tx/doge/3a431a75d45ac0b64110ac7e0799f858d544199a9204614c523e43f52ed60d76">Finished</a>
+      </div>
+   </td>
+   
+</tr>
+<tr>
+   <td>
+   </td>
+   <td>Feb 10, 2022, 10:11 AM</td>
+   <td>
+      <i class="fa fa-twitter"></i>
+      Received from HODLdogeNOTdebt
+   </td>
+   <td>0.069 </td>
+   <td>doge</td>
+   <td>
+      Tip expired
+   </td>
+   
+</tr>
+</tbody>
+</table>
+
+</div>
+<div class='sdtPagination-sdt-tbl-con' style="width: 100%;">
+        <div style="width: 100%;">
+          <ul class="sdtPagination">
+            
+            <li data-page="prev">
+                     <span> <i class="fa fa-angle-left"></i> <span class="sr-only"></span></span>
+                    </li>
+           <!-- Here the JS Function Will Add the Rows -->
+        <li data-page="next" id="prev">
+                       <span> <i class="fa fa-angle-right"></i> <span class="sr-only"></span></span>
+                    </li>
+          </ul>
+        </div>
+</div>
+    </div>
+</div>
+<br/>
+  </div>
+</div>
+
+
+<script type="text/javascript">
+const sdthamburger = document.querySelector(".sdt-hamburger");
+const navLinks = document.querySelector(".sdt-nav-links");
+const links = document.querySelectorAll(".sdt-nav-links li");
+
+sdthamburger.addEventListener('click', ()=>{
+   //Animate Links
+    navLinks.classList.toggle("open");
+    links.forEach(link => {
+        link.classList.toggle("fade");
+    });
+
+    //sdt-hamburger Animation
+    sdthamburger.classList.toggle("toggle");
+});
+function showmenu() {
+  document.getElementById('lftbr').style.display = "block";
+}
+</script>
+<script type="text/javascript">
+  function thousands_separatorsH(num)
+  {
+    var num_parts = num.toString().split(".");
+    num_parts[0] = num_parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    return num_parts.join(".");
+  }
+  function loAt(be) {
+    numf = parseFloat(be).toFixed(4);
+    return numf;
+  }
+   $('#dolv').on('input', function() {
+      $.getJSON('https://chain.so/api/v2/get_price/DOGE/USD', function(daata) {
+                  $("#dogv").val(thousands_separatorsH(loAt($("#dolv").val()/daata.data.prices[0].price)));
+                   
+          });
+   });
+   
+   $('#dogv').on('input', function() {
+      $.getJSON('https://chain.so/api/v2/get_price/DOGE/USD', function(daata) {
+                  $("#dolv").val(thousands_separatorsH(loAt($("#dogv").val()*daata.data.prices[0].price)));
+                   
+          });
+   });
+   $("#clrud").on("click", function() {
+      $("#dogv").val("");
+      $("#dolv").val("");
+   });
+</script>
+<script type="text/javascript">
+
+getsdtPagination('#sdt-table-id');
+
+function getsdtPagination(table) {
+  var lastPage = 1;
+
+  $('#maxRows')
+    .on('change', function(evt) {
+      //$('.sdtPaginationprev').html('');            // reset sdtPagination
+
+     lastPage = 1;
+      $('.sdtPagination')
+        .find('li')
+        .slice(1, -1)
+        .remove();
+      var trnum = 0; // reset tr counter
+      var maxRows = parseInt($(this).val()); // get Max Rows from select option
+
+      if (maxRows == 5000) {
+        $('.sdtPagination').hide();
+      } else {
+        $('.sdtPagination').show();
+      }
+
+      var totalRows = $(table + ' tbody tr').length; // numbers of rows
+      $(table + ' tr:gt(0)').each(function() {
+        // each TR in  table and not the header
+        trnum++; // Start Counter
+        if (trnum > maxRows) {
+          // if tr number gt maxRows
+
+          $(this).hide(); // fade it out
+        }
+        if (trnum <= maxRows) {
+          $(this).show();
+        } // else fade in Important in case if it ..
+      }); //  was fade out to fade it in
+      if (totalRows > maxRows) {
+        // if tr total rows gt max rows option
+        var pagenum = Math.ceil(totalRows / maxRows); // ceil total(rows/maxrows) to get ..
+        //  numbers of pages
+        for (var i = 1; i <= pagenum; ) {
+          // for each page append sdtPagination li
+          $('.sdtPagination #prev')
+            .before(
+              '<li data-page="' +
+                i +
+                '">\
+                  <span>' +
+                i++ +
+                '<span class="sr-only"></span></span>\
+                </li>'
+            )
+            .show();
+        } // end for i
+      } // end if row count > max rows
+      $('.sdtPagination [data-page="1"]').addClass('active'); // add active class to the first li
+      $('.sdtPagination li').on('click', function(evt) {
+        // on click each page
+        evt.stopImmediatePropagation();
+        evt.preventDefault();
+        var pageNum = $(this).attr('data-page'); // get it's number
+
+        var maxRows = parseInt($('#maxRows').val()); // get Max Rows from select option
+
+        if (pageNum == 'prev') {
+          if (lastPage == 1) {
+            return;
+          }
+          pageNum = --lastPage;
+        }
+        if (pageNum == 'next') {
+          if (lastPage == $('.sdtPagination li').length - 3) {
+            return;
+          }
+          pageNum = ++lastPage;
+        }
+
+        lastPage = pageNum;
+        var trIndex = 0; // reset tr counter
+        $('.sdtPagination li').removeClass('active'); // remove active class from all li
+        $('.sdtPagination [data-page="' + lastPage + '"]').addClass('active'); // add active class to the clicked
+        // $(this).addClass('active');          // add active class to the clicked
+      limitPagging();
+        $(table + ' tr:gt(0)').each(function() {
+          // each tr in table not the header
+          trIndex++; // tr index counter
+          // if tr index gt maxRows*pageNum or lt maxRows*pageNum-maxRows fade if out
+          if (
+            trIndex > maxRows * pageNum ||
+            trIndex <= maxRows * pageNum - maxRows
+          ) {
+            $(this).hide();
+          } else {
+            $(this).show();
+          } //else fade in
+        }); // end of for each tr in table
+      }); // end of on click sdtPagination list
+    limitPagging();
+    })
+    .val(20)
+    .change();
+
+  // end of on select change
+
+  // END OF sdtPagination
+}
+
+function limitPagging(){
+  // alert($('.sdtPagination li').length)
+
+  if($('.sdtPagination li').length > 7 ){
+      if( $('.sdtPagination li.active').attr('data-page') <= 3 ){
+      $('.sdtPagination li:gt(5)').hide();
+      $('.sdtPagination li:lt(5)').show();
+      $('.sdtPagination [data-page="next"]').show();
+    }if ($('.sdtPagination li.active').attr('data-page') > 3){
+      $('.sdtPagination li:gt(0)').hide();
+      $('.sdtPagination [data-page="next"]').show();
+      for( let i = ( parseInt($('.sdtPagination li.active').attr('data-page'))  -2 )  ; i <= ( parseInt($('.sdtPagination li.active').attr('data-page'))  + 2 ) ; i++ ){
+        $('.sdtPagination [data-page="'+i+'"]').show();
+
+      }
+
+    }
+  }
+}
+
+
+function FilterkeyWord_all_table() {
+  
+// Count td if you want to search on all table instead of specific column
+
+  var count = $('.sdt-table').children('tbody').children('tr:first-child').children('td').length; 
+
+        // Declare variables
+  var input, filter, table, tr, td, i;
+  input = document.getElementById("search_input_all");
+  var input_value =     document.getElementById("search_input_all").value;
+        filter = input.value.toLowerCase();
+  if(input_value !=''){
+        table = document.getElementById("sdt-table-id");
+        tr = table.getElementsByTagName("tr");
+
+        // Loop through all table rows, and hide those who don't match the search query
+        for (i = 1; i < tr.length; i++) {
+          
+          var flag = 0;
+           
+          for(j = 0; j < count; j++){
+            td = tr[i].getElementsByTagName("td")[j];
+            if (td) {
+             
+                var td_text = td.innerHTML;  
+                if (td.innerHTML.toLowerCase().indexOf(filter) > -1) {
+                //var td_text = td.innerHTML;  
+                //td.innerHTML = 'shaban';
+                  flag = 1;
+                } else {
+                  //DO NOTHING
+                }
+              }
+            }
+          if(flag==1){
+                     tr[i].style.display = "";
+          }else {
+             tr[i].style.display = "none";
+          }
+        }
+    }else {
+      //RESET TABLE
+      $('#maxRows').trigger('change');
+    }
+}
+</script>
+<script type="text/javascript">
+  function wot(ae) {
+    fnum = parseFloat(ae).toFixed(2);
+    return fnum;
+  }
+  $.getJSON('https://chain.so/api/v2/get_price/DOGE/USD', function(price) {
+                  $('#dogepp').html('$' + price.data.prices[0].price);
+                  $.hbz = document.getElementById('maindogeb').innerHTML;
+                  $('#mainusdb').html(wot($.hbz*price.data.prices[0].price));
+  });
+</script>
+<script>
+function myCPFunction() {
+  var copyText = document.getElementById("maindadd");
+  navigator.clipboard.writeText(copyText.innerHTML);
+  
+  var tooltip = document.getElementById("cptooltip");
+  tooltip.innerHTML = "Copied";
+}
+
+function outCPFunc() {
+  var tooltip = document.getElementById("cptooltip");
+  tooltip.innerHTML = "Copy to clipboard";
+}
+var GenerateQRCode, htmlEncode;
+    htmlEncode = function(value) {
+    return $('<div/>').text(value).html();
+  };
+  
+    
+    $('#myqr').empty();
+    // Generate and Output QR Code
+    $('#myqr').attr('src', 'https://chart.googleapis.com/chart?cht=qr&chl=' + htmlEncode('dogecoin:'+document.getElementById("maindadd").innerHTML) + '&chs=500x500&chld=L|0');
+$("#qdn").prop("download", $('#add').val());
+$("#qdn").prop("href", $('#myqr').attr("src")+'.jpg');
+
+$('#amnt').on('input', function() {
+
+         $('#generate').on('click', function() {
+          $("#damta").html('<center><img style="margin-top:10px;" id="qrimgz" height="100" width="100" /><br/><a id="ndq"><ion-icon name="download"></ion-icon></a></center>');
+
+          var GenerateQRCode, htmlEncode;
+    htmlEncode = function(value) {
+    return $('<div/>').text(value).html();
+  };
+      $('#qrimgz').attr('src', 'https://chart.googleapis.com/chart?cht=qr&chl='+htmlEncode('dogecoin:'+document.getElementById("maindadd").innerHTML+'?amount='+$('#amnt').val())+'&chs=500x500&chld=L|0.png');
+      $("#ndq").prop("href", $('#qrimgz').attr("src")+'.jpg');
+                   
+          });
+});
+  $("#qclr").on("click", function() {
+    $("#damta").empty();
+    $("#amnt").val('');
+  });
+</script>
+</body>
+</html>
