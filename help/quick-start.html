@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=none">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Quick-Start | SoDogeTip</title>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../navbar.css">
+    <style type="text/css">
+      * {
+        margi: 0;
+      }
+.faqa{
+  position: relative;
+  margin:20px;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 4px 12px;
+  display: block;
+  padding: 0;
+  box-sizing: border-box;
+}
+.faqck, .faqck::before, .faqck::after{
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity:0;
+  visibility: hidden;
+  margin: 0;
+  height: 0;
+  width: 0;
+}
+.faqa h4{
+  background:rgb(37,80,250);
+  color:white;
+  padding:10px;
+  position: relative;
+  margin: 0;
+}
+.faqlbl {
+  cursor: pointer;
+  margin: 0;
+}
+.faqp{
+  max-height:2000px;
+  overflow: hidden;
+  transition:max-height 0.5s;
+  background-color: white;
+  box-shadow:0 0 10px 0 rgba(0, 0, 0, 0.2);
+  margin: 0;
+}
+.faqp p {
+  padding:10px;
+}
+.faqck:checked ~ h4 ~ div.faqp{
+  max-height:0px;
+  margin: 0;
+}
+#faqmain {
+  width: 90%;
+  margin-left: 4%;
+}
+.sdt-services{
+  background: transparent;
+}
+.sdt-services h1{
+  display: inline-block;
+  text-transform: capitalize;
+  font-size: 20px;
+  padding-bottom: 10px;
+  margin-top: 10px;
+  text-align: center;
+  margin: auto;
+}
+.sdt-svc-cen{
+  max-width: 1200px;
+  margin: auto;
+  overflow: hidden;
+  padding: 20px;
+  text-align: center;
+  overflow: auto;
+  white-space: nowrap;
+}
+.sdt-svc{
+  display: inline-block;
+  width: calc(100% / 2);
+  margin: 0 -2px;
+  padding: 10px;
+  box-sizing: border-box;
+  transition: 0.4s;
+  outline: none;
+}
+.sdt-svc i{
+  color: #3498db;
+  font-size: 34px;
+  margin-bottom: 30px;
+}
+.sdt-svc h2{
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin: 0;
+}
+.sdt-svc p{
+  color: gray;
+  font-size: 15px;
+  font-weight: 500;
+}
+@media screen and (max-width: 800px) {
+  .sdt-svc{
+    width: 100%;
+  }
+}
+@media screen and (max-width: 800px) {
+  #faqmain {
+    width: 100%;
+    margin-left: 0%;
+  }
+}
+</style>
+
+</head>
+<body>
+    <nav>
+        <div class="sdt-logo">
+            <img src="../wsdt.png" alt="Logo Image" onclick="window.location.href='../index.html';" style="cursor: pointer;">
+        </div>
+        <div class="sdt-hamburger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+        <ul class="sdt-nav-links">
+            <li><a href="../stats.html">Stats</a></li>
+            <li><a href="../coins.html">Coins</a></li>
+            <li><a href="../donations.html">Donations</a></li>
+            <li><a href="javascript:void(0);">Help <i class="fa fa-angle-down"></i></a>
+                <ul id="mininav">
+                    <li onclick="window.location.href='faq.html'">FAQ</li>
+                    <li onclick="window.location.href='javascript:void(0);'">Quick-Start</li>
+                    <li onclick="window.location.href='tip-keyword.html'">Tip Keyword</li>
+                    <li onclick="window.location.href='support.html'">Support</li>
+                </ul>
+            </li>
+        </ul>
+        <button id="user" class="sdt-tooltip1"><ion-icon name="person-circle-sharp"></ion-icon>
+            <ul id="mininav">
+                <li><p style="font-size: 12px;background: rgb(37,80,250);color: white;padding: 5px;padding-left: 10px;padding-right: 10px;border-radius: 6px;cursor: pointer;" onclick="window.location.href='../login.html'">Login/Register</p></li>
+                <li><p style="font-size: 10px;">Takes less than a few seconds</p></li>
+            </ul>
+        </button>
+    </nav>
+    <br/>
+
+
+<h3 style="padding-left: 6%;color: rgb(30,41,59);">Quick Start for SoDogeTip</h3>
+<p style="padding-left: 6%;color: rgb(30,41,59);">This quick-start will help reddit users to undestand how to use sodogetip on reddit easily.</p>
+<div id="faqmain">
+
+<div class="faqa">
+  <input class="faqck" type="checkbox" id="faq-1">
+  <h4><label class="faqlbl" for="faq-1"><i class="fa fa-chevron-down"></i>&nbsp; Q.1 How do I register ?</label></h4>
+  <div class="faqp">
+    <p><b>Use website !</b><br/><br/>
+      You can use the website to register your account, use login function and you will see an button to create your account
+      <br/><br/><br/>
+      <b>The reddit way !</b><br/><br/>
+      To register, you need to send the <a style="color: rgb(32,107,196);cursor: pointer;" href="https://www.reddit.com/message/compose?to=sodogetip&subject=%2Bregister&message=%2Bregister"><strong>+register</strong></a> to the bot.
+    </p><br/>
+        <div class="sdt-services">
+
+
+      <div class="sdt-svc-cen">
+        
+        <div class="sdt-svc">
+          <img height="350" width="350" src="../images/register.png" style="border-radius: 6px;" />
+        </div>
+      
+
+        <div class="sdt-svc">
+          <img width="460" height="335" src="../images/register_repply.png" style="border-radius: 6px;" />
+        </div>
+
+    </div>
+</div>
+  </div>
+</div>
+
+<div class="faqa">
+  <input class="faqck" type="checkbox" id="faq-2">
+  <h4><label class="faqlbl" for="faq-2"><i class="fa fa-chevron-down"></i>&nbsp; Q.2 Where is my deposit address ? </label></h4>
+  <div class="faqp">
+    <p>To find your deposit address, send the <a style="color: rgb(32,107,196);cursor: pointer;" href="https://www.reddit.com/message/compose?to=sodogetip&subject=%2Binfo&message=%2Binfo"><strong>+info</strong></a> command to the bot. </p><br/>
+    <div class="sdt-services">
+
+      <div class="sdt-svc-cen">
+        
+        <div class="sdt-svc">
+          <img height="350" width="350" src="../images/info.png" style="border-radius: 6px;" />
+        </div>
+
+        <div class="sdt-svc">
+          <img width="460" height="335" src="../images/info_repply.png" style="border-radius: 6px;" />
+        </div>
+
+    </div>
+</div>
+  </div>
+</div>
+
+<div class="faqa">
+  <input class="faqck" type="checkbox" id="faq-3">
+  <h4><label class="faqlbl" for="faq-3"><i class="fa fa-chevron-down"></i>&nbsp; Q.3 How do I tip a user ? </label></h4>
+  <div class="faqp">
+    <p>
+      To tip a user, you need to comment a post and mention the bot using the following syntax: <a style="color: rgb(32,107,196);cursor: pointer;" href="https://www.reddit.com/u/sodogetip"><strong>+u/sodogetip [amount] [currency] verify</strong></a>
+    </p><br/>
+    <div class="sdt-services">
+
+      <div class="sdt-svc-cen">
+        
+        <div class="sdt-svc">
+          <img height="308" width="440" src="../images/tip-doge.png" style="border-radius: 6px;" />
+        </div>
+  
+      </div>
+
+    </div>
+    <br/>
+    <p><a href="tips-keyword.html" style="cursor: pointer;color: rgb(32,107,196);"><strong>You can also use some keywords instead of a fixed amount.</strong></a></p>
+  </div>
+</div>
+
+<div class="faqa">
+  <input class="faqck" type="checkbox" id="faq-4">
+  <h4><label class="faqlbl" for="faq-4"><i class="fa fa-chevron-down"></i>&nbsp; Q.4 How do I register an email address ?  </label></h4>
+  <div class="faqp">
+    <p>
+      <b>Use website !</b><br/><br/>
+      You can use the website to register your email, connect you on website and go to settings, you will have link to register your email<br/><br/><br/>
+
+      <b>The reddit way !</b><br/><br/>
+      To tip an external address or withdraw, you need a valid email address. It will be used to confirm a tip or withdrawal.<br/><br/><br/>
+
+      First, register your email address using <a href="https://www.reddit.com/message/compose?to=sodogetip&subject=%2Bregister_email&message=%2Bregister_email%20MAIL" style="color: rgb(32,107,196);cursor: pointer;"><strong>+register_email</strong></a>: 
+    </p><br/>
+      <div class="sdt-services">
+      <div class="sdt-svc-cen">  
+        <div class="sdt-svc">
+          <img height="345" width="350" src="../images/register-email/reddit-register.png" style="border-radius: 6px;" />
+        </div>
+        <div class="sdt-svc">
+          <img height="165" width="394" src="../images/register-email/token-mail.png" style="border-radius: 6px;" />
+        </div>
+      </div>
+    </div>
+
+    <br/>
+
+    <p>
+      Second step validate your email address<br/><br/>
+      Follow the link in the email or send the bot a message like this:
+    </p><br/>
+    <div class="sdt-services">
+      <div class="sdt-svc-cen">  
+        <div class="sdt-svc">
+          <img height="350" width="353" src="../images/register-email/token-reddit-msg.png" style="border-radius: 6px;" />
+        </div>
+        <div class="sdt-svc">
+          <img height="68" width="357" src="../images/register-email/register-success.png" style="border-radius: 6px;" />
+        </div>
+      </div>
+    </div>
+
+    <br/>
+    <p>
+
+      Now you will able to withdraw/tip external address
+    </p>
+
+  </div>
+</div>
+
+<div class="faqa">
+  <input class="faqck" type="checkbox" id="faq-5">
+  <h4><label class="faqlbl" for="faq-5"><i class="fa fa-chevron-down"></i>&nbsp; Q.5 How do I withdraw ?</label></h4>
+  <div class="faqp">
+    <p>
+      To withdraw, you need a verified email address after which you can send the <a style="color: rgb(32,107,196);cursor: pointer;" href="https://www.reddit.com/message/compose?to=sodogetip&subject=%2Bwithdraw&message=%2Bwithdraw%20AMOUNT%20doge%20to%20ADDRESS"><strong>+withdraw</strong></a> command. 
+    </p><br/>
+    <div class="sdt-services">
+      <div class="sdt-svc-cen">  
+        <div class="sdt-svc">
+          <img height="342" width="351" src="../images/withdraw/withdraw-message.png" style="border-radius: 6px;" />
+        </div>
+        <div class="sdt-svc">
+          <img height="149" width="361" src="../images/withdraw/email-withdraw.png" style="border-radius: 6px;" />
+        </div>
+      </div>
+    </div>
+    
+    <br/>
+    
+    <p>Follow link or make a message like this</p><br/>
+    <div class="sdt-services">
+      <div class="sdt-svc-cen">  
+        <div class="sdt-svc">
+          <img height="342" width="353" src="../images/withdraw/approve-message.png" style="border-radius: 6px;" />
+        </div>
+      </div>
+    </div>
+
+    </div>
+  </div>
+</div>
+
+
+<br/>
+
+        <script type="text/javascript">
+        const sdthamburger = document.querySelector(".sdt-hamburger");
+const navLinks = document.querySelector(".sdt-nav-links");
+const links = document.querySelectorAll(".sdt-nav-links li");
+
+sdthamburger.addEventListener('click', ()=>{
+   //Animate Links
+    navLinks.classList.toggle("open");
+    links.forEach(link => {
+        link.classList.toggle("fade");
+    });
+
+    //sdt-hamburger Animation
+    sdthamburger.classList.toggle("toggle");
+});
+    </script>
+</body>
+</html>

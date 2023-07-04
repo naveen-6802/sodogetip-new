@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=none">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Support | SoDogeTip</title>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../navbar.css">
+    <style type="text/css">
+.sdt-services{
+  background: transparent;
+}
+.sdt-services h1{
+  display: inline-block;
+  text-transform: capitalize;
+  font-size: 20px;
+  padding-bottom: 10px;
+  margin-top: 10px;
+  text-align: center;
+  margin: auto;
+}
+.sdt-svc-cen{
+  max-width: 100%;
+  margin: auto;
+  overflow: hidden;
+  padding: 20px;
+  text-align: center;
+}
+.sdt-svc{
+  display: inline-block;
+  width: calc(90% / 3);
+  margin: 0 -2px;
+  padding: 15px;
+  box-sizing: border-box;
+  transition: 0.4s;
+  outline: none;
+  border-radius: 10px;
+  margin-top: 0px;
+  margin-left: 10px;
+  word-wrap: break-word;
+  background: white;
+  border:1px solid rgba(37,80,250,0.3);
+}
+.sdt-svc:hover{
+  outline: none;
+}
+.sdt-svc i{
+  color: #3498db;
+  font-size: 34px;
+  margin-bottom: 30px;
+}
+.sdt-svc h2{
+  font-size: 15px;
+  text-transform: capitalize;
+  font-weight: bold;
+  margin: 0;
+  padding: 5px;
+
+}
+.sdt-svc p{
+  color: gray;
+  font-size: 12px;
+  font-weight: 500;
+}
+@media screen and (max-width: 800px) {
+  .sdt-svc{
+    width: 100%;
+    margin-left: 0px;
+    margin-top: 20px;
+  }
+  .sdt-svc:nth-child(1) {
+    margin-top: 0px;
+  }
+}
+#activatebtn {
+  border: 0px;
+  background: rgb(37,80,250);
+  color: white;
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+}
+</style>
+
+</head>
+<body>
+    <nav>
+        <div class="sdt-logo">
+            <img src="../wsdt.png" alt="Logo Image" onclick="window.location.href='../index.html';" style="cursor: pointer;">
+        </div>
+        <div class="sdt-hamburger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+        <ul class="sdt-nav-links">
+            <li><a href="../stats.html">Stats</a></li>
+            <li><a href="../coins.html">Coins</a></li>
+            <li><a href="../donations.html">Donations</a></li>
+            <li><a href="javascript:void(0);">Help <i class="fa fa-angle-down"></i></a>
+                <ul id="mininav">
+                    <li onclick="window.location.href='faq.html'">FAQ</li>
+                    <li onclick="window.location.href='quick-start.html'">Quick-Start</li>
+                    <li onclick="window.location.href='tip-keyword.html'">Tip Keyword</li>
+                    <li onclick="window.location.href='javascript:void(0);'">Support</li>
+                </ul>
+            </li>
+        </ul>
+        <button id="user" class="sdt-tooltip1"><ion-icon name="person-circle-sharp"></ion-icon>
+            <ul id="mininav">
+                <li><p style="font-size: 12px;background: rgb(37,80,250);color: white;padding: 5px;padding-left: 10px;padding-right: 10px;border-radius: 6px;cursor: pointer;" onclick="window.location.href='../login.html'">Login/Register</p></li>
+                <li><p style="font-size: 10px;">Takes less than a few seconds</p></li>
+            </ul>
+        </button>
+    </nav>
+    <br/>
+
+  <div class="sdt-services">
+    <h3 style="padding-left: 6%;color: rgb(30,41,59);">Support for SoDogeTip</h3>
+    <p style="padding-left: 6%;color: rgb(30,41,59);">How can we help you ?</p>
+<div class="sdt-svc-cen">
+        
+        <div class="sdt-svc">
+          
+          <h2 style="color: black;">Contact support on Reddit</h2>
+          <p style="">If you need any help or assistance, just send a PM to <a style="color: rgb(32,107,196);cursor: pointer;" href="https://reddit.com/u/just-an-dev"><strong>/u/just-an-dev on Reddit.</strong></a>
+        </p>
+        </div>
+      
+
+        <div class="sdt-svc">
+
+         <h2 style="color: black;">Contact support on Discord</h2>
+          <p style=""><a style="color: rgb(32,107,196);cursor: pointer;" href="https://discord.gg/eMVuWMh"><strong>You can also join the Discord server here and ask for assistance.</strong></a></p>
+        </div>
+
+        <div class="sdt-svc">
+          
+          <h2 style="color: black;">Contact support on Twitter</h2>
+          <p style="">If you need any help or assistance, just send a DM to <a style="color: rgb(32,107,196);cursor: pointer;" href="http://twitter.com/just_an_dev"><strong>@just_an_dev on Twitter.</strong></a></p>
+        </div>
+    </div>
+</div>
+
+<br/>
+
+        <script type="text/javascript">
+        const sdthamburger = document.querySelector(".sdt-hamburger");
+const navLinks = document.querySelector(".sdt-nav-links");
+const links = document.querySelectorAll(".sdt-nav-links li");
+
+sdthamburger.addEventListener('click', ()=>{
+   //Animate Links
+    navLinks.classList.toggle("open");
+    links.forEach(link => {
+        link.classList.toggle("fade");
+    });
+
+    //sdt-hamburger Animation
+    sdthamburger.classList.toggle("toggle");
+});
+    </script>
+</body>
+</html>
